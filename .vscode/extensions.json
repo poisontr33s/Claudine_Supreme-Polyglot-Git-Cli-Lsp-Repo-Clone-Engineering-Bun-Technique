@@ -1,0 +1,8 @@
+{
+    "recommendations": [],
+    "unwantedRecommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance", 
+        "rust-lang.rust-analyzer"
+    ]
+}

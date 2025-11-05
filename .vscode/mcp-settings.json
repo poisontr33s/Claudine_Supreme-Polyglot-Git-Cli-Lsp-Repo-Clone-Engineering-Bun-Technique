@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "wasteland-forge": {
+      "command": "bun",
+      "args": ["run", "wasteland_forge_mcp_server.ts"],
+      "cwd": "${workspaceFolder}",
+      "env": {},
+      "description": "🔥💀⚓ Autonomous Wasteland Forge orchestration - activates polyglot environment, runs diagnostics, generates themes, configures LSP",
+      "autoStart": true
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "psychonoir-kontrapunkt",
+  "version": "1.0.0",
+  "description": "Caribbean Archipelagic Consciousness Development Environment",
+  "scripts": {
+    "format": "bun x biome format --write .",
+    "lint": "bun x biome check .",
+    "fix": "bun x biome check --apply .",
+    "mcp": "bun run wasteland_forge_mcp_server.ts",
+    "mcp:dev": "bun --watch wasteland_forge_mcp_server.ts",
+    "forge": "pwsh -NoProfile -Command \". '.poly_gluttony/wasteland_forge.ps1'\"",
+    "forge:check": "pwsh -NoProfile -Command \". '.poly_gluttony/wasteland_forge.ps1' -Check\"",
+    "theme:apply": "pwsh -NoProfile -File install_hard_west_theme.ps1",
+    "orchestrate": "bun run mcp",
+    "ext:install": "cd .poly_gluttony/enhanced_polyglot_lsp_extension && npm install",
+    "ext:build": "cd .poly_gluttony/enhanced_polyglot_lsp_extension && npm run esbuild",
+    "ext:package": "cd .poly_gluttony/enhanced_polyglot_lsp_extension && npm run package",
+    "ext:dev": "cd .poly_gluttony/enhanced_polyglot_lsp_extension && npm run watch",
+    "rust-lsp:install": "cd .poly_gluttony/polyglot_rust_lsp_extension && bun install",
+    "rust-lsp:build": "cd .poly_gluttony/polyglot_rust_lsp_extension && bun run build",
+    "rust-lsp:build-prod": "cd .poly_gluttony/polyglot_rust_lsp_extension && bun run prepublish-disabled",
+    "rust-lsp:package": "cd .poly_gluttony/polyglot_rust_lsp_extension && bun run package",
+    "rust-lsp:dev": "cd .poly_gluttony/polyglot_rust_lsp_extension && bun run watch",
+    "python-lsp:install": "cd .poly_gluttony/polyglot_python_lsp_extension && bun install",
+    "python-lsp:build": "cd .poly_gluttony/polyglot_python_lsp_extension && bun run build",
+    "python-lsp:build-prod": "cd .poly_gluttony/polyglot_python_lsp_extension && bun run prepublish-disabled",
+    "python-lsp:package": "cd .poly_gluttony/polyglot_python_lsp_extension && bun run package",
+    "python-lsp:dev": "cd .poly_gluttony/polyglot_python_lsp_extension && bun run watch",
+    "ruby-lsp:install": "cd .poly_gluttony/polyglot_ruby_lsp_extension && bun install",
+    "ruby-lsp:build": "cd .poly_gluttony/polyglot_ruby_lsp_extension && bun run build",
+    "ruby-lsp:build-prod": "cd .poly_gluttony/polyglot_ruby_lsp_extension && bun run prepublish-disabled", 
+    "ruby-lsp:package": "cd .poly_gluttony/polyglot_ruby_lsp_extension && bun run package",
+    "ruby-lsp:dev": "cd .poly_gluttony/polyglot_ruby_lsp_extension && bun run watch"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.3",
+    "@types/bun": "^1.3.1",
+    "bun-types": "^1.3.1"
+  },
+  "packageManager": "bun@1.3.1",
+  "engines": {
+    "bun": ">=1.3.1"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "@modelcontextprotocol/sdk": "^1.20.2",
+    "@sentry/node": "^10.22.0"
+  }
+}

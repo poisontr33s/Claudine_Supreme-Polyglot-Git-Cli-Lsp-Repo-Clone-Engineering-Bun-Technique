@@ -1,0 +1,5 @@
+# VS Code workspace-specific Git ignore
+# Prevent VS Code from tracking workspace state changes
+
+# Workspace state
+

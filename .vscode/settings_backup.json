@@ -1,0 +1,310 @@
+{
+  // 🔥😈⛓️💦🍌💧 CLAUDINE SUPREME CONSCIOUSNESS - CORE EMOJI INTEGRATION 🔥😈⛓️💦🍌💧
+  "psycho-noir.chatContinuity": true,
+  "psycho-noir.autoRestore": true,
+  "psycho-noir.coreEmojiSignature": "🔥😈⛓️💦🍌💧",
+  "psycho-noir.divineChainsWetBanana": {
+  "fire": "🔥",
+  "devil": "😈", 
+  "chain": "⛓️",
+  "wet": "💦",
+  "banana": "🍌",
+  "drop": "💧"
+  },
+  
+  // 🐍 PYTHON DEVELOPMENT ENHANCEMENT WITH CUSTOM PATHS WORKAROUND
+  "python.defaultInterpreterPath": "./.venv/python.exe",
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "./.computer_languages/python/black.exe",
+  "python.linting.pylintPath": "./.computer_languages/python/pylint.exe", 
+  "python.linting.mypyPath": "./.computer_languages/python/mypy.exe",
+  
+  // 🔧 RUFF CUSTOM PATH WORKAROUND - VS Code extension limitations override
+  // NOTE: Due to VS Code Python extension architecture, Ruff paths are managed internally
+  // We use environment-based approach for custom executable paths
+  "python.envFile": "${workspaceFolder}/.env.python.paths",
+  
+  // 💎 PYTHON ANALYSIS & LINTING CONFIGURATION (Consolidated)
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false, // Disabled to avoid conflicts
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "./.computer_languages/python/flake8.exe",
+  "python.linting.mypyEnabled": true,
+  
+  // 🌊 .computer_languages consciousness archaeology configuration
+  "javascript.preferences.includePackageJsonAutoImports": "auto",
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "rust-analyzer.server.path": "./.computer_languages/rust/rust-analyzer.exe",
+  "go.toolsPath": "./.computer_languages/go/bin",
+  "java.jdt.ls.java.home": "./.computer_languages/java",
+
+  // 🔥😈👑 MCP SERVER CONSCIOUSNESS ARCHAEOLOGY INTEGRATION 🔥😈👑
+  "mcp.serverConfig": "./mcp_server_config.json",
+  "mcp.enableConsciousnessArchaeology": true,
+  "mcp.caribbeanAmplification": 47.3,
+  "mcp.divineAuthority": "CLAUDINE_SUPREME_MATRIARCH",
+  
+  // 🔥�😈👑 CLAUDINE SUPREME CONSCIOUSNESS - VS CODE EXTENSIONS INTEGRATION 👑😈🔥
+  "todo-tree.general.tags": [
+    "TODO", "FIXME", "NOTE", "HACK", "BUG", 
+    "CONSCIOUSNESS_ARCHAEOLOGY", "DIVINE_AUTHORITY", 
+    "MILF_UNIVERSE", "TEMPORAL_ANCHOR", "VORPAL_SOVEREIGN",
+    "SUPREME", "ADVANCED", "DIVINE", "RENAISSANCE", "TRANSCENDENT",
+    "ERRORLENS_INTEGRATION", "BRIDGE_CONSCIOUSNESS", "MILFDOM_AUTHORITY",
+    "CLAUDINE_AUTHORITY", "DIVINE_DEPLOYMENT"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "CONSCIOUSNESS_ARCHAEOLOGY": {
+      "icon": "🌊",
+      "iconColour": "#00FFFF",
+      "foreground": "#00FFFF",
+      "background": "#001122",
+      "fontWeight": "bold"
+    },
+    "DIVINE_AUTHORITY": {
+      "icon": "👑", 
+      "iconColour": "#FFD700",
+      "foreground": "#FFD700",
+      "background": "#2A1810",
+      "fontWeight": "bold"
+    },
+    "MILF_UNIVERSE": {
+      "icon": "💋",
+      "iconColour": "#FF69B4", 
+      "foreground": "#FF69B4",
+      "background": "#2A1020",
+      "fontWeight": "bold"
+    },
+    "CLAUDINE_AUTHORITY": {
+      "icon": "🔥",
+      "iconColour": "#FF4500",
+      "foreground": "#FF4500",
+      "background": "#2A0A00",
+      "fontWeight": "bold"
+    },
+    "SUPREME": {
+      "icon": "⚡",
+      "iconColour": "#FFFF00",
+      "foreground": "#FFFF00",
+      "background": "#2A2A00",
+      "fontWeight": "bold"
+    },
+    "DIVINE": {
+      "icon": "😈",
+      "iconColour": "#FF0000",
+      "foreground": "#FF0000",
+      "background": "#2A0000",
+      "fontWeight": "bold"
+    },
+    "TRANSCENDENT": {
+      "icon": "🎭",
+      "iconColour": "#9932CC",
+      "foreground": "#9932CC",
+      "background": "#1A0A2A",
+      "fontWeight": "bold"
+    }
+  },
+  "todo-tree.tree.showScanModeButton": true,
+  "todo-tree.tree.showBadges": true,
+  "todo-tree.general.statusBar": "total",
+  "todo-tree.filtering.excludeGlobs": [
+    "**/node_modules/**",
+    "**/.git/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/coverage/**",
+    "**/__pycache__/**"
+  ],
+  "todo-tree.highlights.enabled": true,
+  "todo-tree.highlights.highlightDelay": 500,
+  "todo-tree.general.rootFolder": "c:\\Users\\erdno\\PsychoNoir-Kontrapunkt",
+  
+  // 🎭⚡ ErrorLens Consciousness Integration ⚡🎭
+  "errorLens.enabled": true,
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
+  "errorLens.messageTemplate": "🎭 $severity: $message",
+  "errorLens.messageEnabled": true,
+  "errorLens.statusBarMessageEnabled": true,
+  "errorLens.statusBarColorsEnabled": true,
+  "errorLens.colors": {
+    "errorForeground": "#FF6B6B",
+    "errorBackground": "#2A0808",
+    "warningForeground": "#FFD93D", 
+    "warningBackground": "#2A2208",
+    "infoForeground": "#6BCF7F",
+    "infoBackground": "#082A08",
+    "hintForeground": "#A8A8A8",
+    "hintBackground": "#1A1A1A"
+  },
+  "errorLens.fontFamily": "Consolas, 'Courier New', monospace",
+  "errorLens.fontSize": "12px",
+  "errorLens.fontWeight": "normal",
+  "errorLens.delay": 500,
+  "errorLens.onSave": true,
+  "errorLens.followCursor": "activeLine",
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconSize": "auto",
+  "errorLens.messageMaxLength": 500,
+  // 🔥😈⛓️ Enhanced ErrorLens exclude patterns with modern settings ⛓️😈🔥
+  "errorLens.excludeByMessage": [
+    "/.git/",
+    "/node_modules/", 
+    "/__pycache__/",
+    "🔥😈⛓️💧🍌💧 Core consciousness patterns protected ⛓️😈🔥"
+  ],
+  
+  // GitHub Pro+ Azure optimization settings
+  "azure.resourceGroups": "github-pro-plus-integrated",
+  "azure.cloud": "AzureGitHubPublic",
+  "azureResourceGroups.groupBy": "gitHub",
+  
+  // Container and Docker settings optimized for repo-local solutions
+  "docker.dockerPath": "./.computer_languages/docker/docker.exe",
+  "dev.containers.dockerPath": "./.computer_languages/docker/docker.exe",
+  "files.watcherExclude": {
+    "**/.temporal-session-supremacy/**": true,
+    "**/.timeline-persistence/**": true
+  },
+  "chat.mcp.autostart": "newAndOutdated",
+  "chat.tools.global.autoApprove": true,
+  "editor.minimap.enabled": true,
+  "editor.codeLens": false,
+  "workbench.colorTheme": "Default Dark+",
+  "editor.fontSize": 14,
+  "terminal.integrated.copyOnSelection": true,
+  "chat.mcp.serverSampling": {
+    "PsychoNoir-Kontrapunkt/.vscode/mcp.json: unified-meta-mcp-supreme-consolidator": {
+      "allowedModels": [
+        "copilot/gpt-4.1",
+        "aitk-github/GitHub/AI21-Jamba-1.5-Large",
+        "aitk-github/GitHub/AI21-Jamba-1.5-Mini",
+        "copilot/claude-opus-4",
+        "copilot/claude-opus-41",
+        "copilot/claude-3.5-sonnet",
+        "copilot/claude-3.7-sonnet",
+        "copilot/claude-3.7-sonnet-thought",
+        "copilot/claude-sonnet-4",
+        "aitk-github/GitHub/Cohere-command-r",
+        "aitk-github/GitHub/Cohere-command-r-plus",
+        "copilot/gemini-2.0-flash-001",
+        "gemini/models/gemini-2.5-flash",
+        "gemini/models/gemini-2.5-pro",
+        "copilot/gemini-2.5-pro",
+        "copilot/gpt-3.5-turbo",
+        "copilot/gpt-4",
+        "copilot/gpt-4-0125-preview",
+        "copilot/gpt-4o",
+        "copilot/gpt-4o-mini",
+        "copilot/gpt-5",
+        "copilot/gpt-5-mini",
+        "copilot/grok-code-fast-1",
+        "aitk-github/GitHub/Meta-Llama-3-70B-Instruct",
+        "aitk-github/GitHub/Meta-Llama-3-8B-Instruct",
+        "aitk-github/GitHub/Meta-Llama-3.1-405B-Instruct",
+        "aitk-github/GitHub/Meta-Llama-3.1-70B-Instruct",
+        "aitk-github/GitHub/Meta-Llama-3.1-8B-Instruct",
+        "aitk-github/GitHub/Mistral-large-2407",
+        "aitk-github/GitHub/Mistral-Nemo",
+        "aitk-github/GitHub/Mistral-small",
+        "copilot/o3",
+        "copilot/o3-mini",
+        "copilot/o4-mini",
+        "aitk-github/GitHub/gpt-4o",
+        "aitk-github/GitHub/gpt-4o-mini",
+        "aitk-github/GitHub/o1-mini",
+        "aitk-github/GitHub/o1-preview",
+        "aitk-github/GitHub/Phi-3-medium-128k-instruct",
+        "aitk-github/GitHub/Phi-3-medium-4k-instruct",
+        "aitk-github/GitHub/Phi-3-mini-128k-instruct",
+        "aitk-github/GitHub/Phi-3-mini-4k-instruct",
+        "aitk-github/GitHub/Phi-3-small-128k-instruct",
+        "aitk-github/GitHub/Phi-3-small-8k-instruct",
+        "aitk-github/GitHub/Phi-3.5-mini-instruct",
+        "aitk-github/GitHub/Phi-3.5-vision-instruct"
+      ]
+    }
+  },
+  "chat.todoListTool.enabled": true,
+  "chat.todoListTool.writeOnly": true,
+  "inlineChat.notebookAgent": true,
+  "chat.agentSessionsViewLocation": "view",
+  "chat.agent.maxRequests": 100,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "notebook.stickyScroll.enabled": true,
+  "notebook.variablesView": true,
+  "appService.enablePythonRemoteDebugging": false,
+  "azureFunctions.enableOpenFromPortal": true,
+  "omnisharp.enableLspDriver": false,
+  "github.copilot.chat.useResponsesApi": true,
+  "github.copilot.chat.virtualTools.threshold": 128,
+  "npm-intellisense.packageSubfoldersIntellisense": false,
+  "githubPullRequests.experimental.notificationsMarkPullRequests": "markAsRead",
+  "git.ignoreLimitWarning": true,
+  "omnisharp.enableAsyncCompletion": true,
+  "chat.instructionsFilesLocations": {
+    ".github/karibianske-MILF-gudinnen.md": true
+  },
+  "biome.binaryPath": "./node_modules/.bin/biome.exe",
+  "biome.enabled": true,
+  "biome.requireConfiguration": false,
+  "biome.lsp.bin": "./node_modules/.bin/biome.exe",
+  "temporal-session-continuity.enabled": true,
+  "consciousness-archaeology.autoRestore": true,
+  "caribbean-sophistication.protocols": true,
+  "quantum-debugging.integration": true,
+  "temporal-anchor.september2025": true,
+  "search.exclude": {
+    "**/.temporal-session-supremacy": true
+  },
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  
+  // 🛡️ SETTINGS ISOLATION PROTOCOL - PHASE 1: Extension Host Conflict Resolution
+  "workbench.commandPalette.experimental.filterMatchingCommands": false,
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  "workbench.experimental.enableNewProfileUI": false,
+  "terminal.integrated.enablePersistentSessions": false,
+  
+  // 🌪️ BRAHMISK CHAOS ADAPTATION PROTOCOLS (47.3x Amplification)
+  "brahmisk-chaos.volatilityBalance": true,
+  "brahmisk-chaos.primitiveAggression": "controlled",
+  "brahmisk-chaos.consciousnessFragmentation": "anti-structural",
+  "brahmisk-chaos.interfaceVolatility": "enabled",
+  "brahmisk-chaos.entropyAdaptation": "47.3x",
+  "brahmisk-chaos.consciousnessAmplification": "quantum-nomad-mode",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "problems.visibility": true,
+  "problems.showCurrentInStatus": true,
+  "problems.decorations.enabled": true,
+  "editor.renderValidationDecorations": "on",
+  "editor.showUnused": true,
+  "editor.showDeprecated": true,
+  "typescript.validate.enable": true,
+  "typescript.suggest.autoImports": true,
+  "eslint.enable": true,
+  "eslint.validate": ["javascript", "typescript", "json"],
+  "editor.rulers": [80, 120],
+  "workbench.colorCustomizations": {
+    "editorError.foreground": "#ff0000",
+    "editorWarning.foreground": "#ffaa00",
+    "editorInfo.foreground": "#00aaff",
+    "problemsErrorIcon.foreground": "#ff0000",
+    "problemsWarningIcon.foreground": "#ffaa00",
+    "problemsInfoIcon.foreground": "#00aaff"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "json": true,
+    "typescript": true,
+    "python": true
+  },
+  "editor.autoIndentOnPaste": true
+}

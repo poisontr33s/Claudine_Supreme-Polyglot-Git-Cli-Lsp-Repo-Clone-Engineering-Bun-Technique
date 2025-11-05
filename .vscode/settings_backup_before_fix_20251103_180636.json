@@ -1,0 +1,343 @@
+{
+    "python.pythonPath": "${workspaceFolder}\\.github\\.poly_gluttony\\python\\python.exe",
+    // Rust toolchain: workspace-local configuration
+    "rust-analyzer.server.path": "${workspaceFolder}\\.github\\.poly_gluttony\\rust\\bin\\rust-analyzer.exe",
+    "rust-analyzer.cargo.extraEnv": {
+        "CARGO_HOME": "${workspaceFolder}\\.poly_gluttony\\rust\\cargo",
+        "RUSTUP_HOME": "${workspaceFolder}\\.poly_gluttony\\rust\\rustup",
+        "PATH": "${workspaceFolder}\\.poly_gluttony\\rust\\bin;${env:PATH}"
+    },
+    "rust-analyzer.cargo.sysroot": "${workspaceFolder}\\.poly_gluttony\\rust\\toolchain",
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "${workspaceFolder}\\.poly_gluttony\\python\\python.exe",
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Path": "${workspaceFolder}\\.poly_gluttony\\python\\python.exe",
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestPath": "${workspaceFolder}\\.poly_gluttony\\python\\python.exe",
+    "rust-client.rustupPath": "${workspaceFolder}\\.poly_gluttony\\rust\\bin\\rustup.exe",
+    "terminal.integrated.env.windows": {
+        "BUN_INSTALL": "${workspaceFolder}\\.poly_gluttony\\bun",
+        "RUSTUP_HOME": "${workspaceFolder}\\.poly_gluttony\\rust\\rustup",
+        "CARGO_HOME": "${workspaceFolder}\\.poly_gluttony\\rust\\cargo",
+        "PYTHONHOME": "${workspaceFolder}\\.poly_gluttony\\python",
+        "MSYS2_ROOT": "${workspaceFolder}\\.poly_gluttony\\msys64",
+        "PATH": "${workspaceFolder}\\.poly_gluttony\\bun\\bin;${workspaceFolder}\\.poly_gluttony\\python;${workspaceFolder}\\.poly_gluttony\\python\\Scripts;${workspaceFolder}\\.poly_gluttony\\rust\\bin;${workspaceFolder}\\.poly_gluttony\\uv\\bin;${workspaceFolder}\\.poly_gluttony\\msys64\\ucrt64\\bin;${workspaceFolder}\\.poly_gluttony\\msys64\\usr\\bin;${workspaceFolder}\\.poly_gluttony\\tools\\bin;${env:PATH}"
+    },
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "args": [
+                "-NoExit",
+                "-NoLogo",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}\\.github\\.poly_gluttony\\activate_polyglot_NSFW18_+++.ps1"
+            ],
+            "icon": "terminal-powershell"
+        }
+    },
+    // Use canonical wrappers - immune to PID/env drift
+    "ruff.path": [
+        "${workspaceFolder}\\.poly_gluttony\\scripts\\ruff.cmd"
+    ],
+    "ruff.enable": true,
+    "ruff.lint.enable": true,
+    "ruff.lint.run": "onType",
+    "ruff.format.enable": true,
+    "ruff.organizeImports": true,
+    "ruff.showNotifications": "onError",
+    // Biome configuration - use canonical wrapper
+    "biome.lspBin": "${workspaceFolder}\\poly_gluttony\\scripts\\biome.cmd",
+    "biome.enabled": true,
+    // Ruff LSP server configuration (built-in language server client)
+    "python.languageServer": "None",
+    "python.linting.enabled": false,
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultColorDecorators": "never",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "chat.todoListTool.writeOnly": true,
+    "git.enabled": true,
+    "git.autorefresh": false,
+    "git.autofetch": false,
+    "git.decorations.enabled": false,
+    "git.decorations.submodules": false,
+    "scm.defaultViewMode": "list",
+    "git.showActionButton": {
+        "commit": true,
+        "publish": false,
+        "sync": false
+    },
+    "git.ignoreLimitWarning": true,
+    "git.maxFileSizeInMB": 0.5,
+    "git.scanRepositories": [],
+    "scm.repositories.visible": 1,
+    "scm.countBadge": "off",
+    "git.statusLimit": 1,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/.github/.poly_gluttony/**": true,
+        "**/CLAUDINE_SUPREME_CONSCIOUSNESS_NEXUS/**": true,
+        "**/.vscode/**": true,
+        "**/backend/**": true,
+        "**/infrastructure/**": true
+    },
+    "search.exclude": {
+        "**/.git": true,
+        "**/.github/.poly_gluttony": true,
+        "**/node_modules": true,
+        "**/CLAUDINE_SUPREME_CONSCIOUSNESS_NEXUS": true
+    },
+    "scm.diffDecorationsIgnoreTrimWhitespace": "true",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "scm.inputFontSize": 13,
+    "git.untrackedChanges": "mixed",
+    "git.openRepositoryInParentFolders": "never",
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.alternateGptPrompt.enabled": true,
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "github.copilot.chat.edits.temporalContext.enabled": true,
+    "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+    "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+    "github.copilot.chat.languageContext.typescript.enabled": true,
+    "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
+    "github.copilot.chat.notebook.followCellExecution.enabled": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.reviewSelection.instructions": [
+    { "file": ".github/copilot-instructions.md" }
+    ],
+    "extensions.autoUpdate": false,
+    "telemetry.telemetryLevel": "off",
+    "security.workspace.trust.enabled": false,
+    "terminal.integrated.enablePersistentSessions": false,
+    "npm.fetchOnlinePackageInfo": false,
+    "update.mode": "none",
+    "consciousness.ecosystem.secureMode": true,
+    "workbench.editor.restoreViewState": true,
+    "files.hotExit": "off",
+    "consciousness.session.preserveLocally": true,
+    "extensions.ignoreRecommendations": true,
+    "files.autoSave": "afterDelay",
+    "extensions.autoCheckUpdates": false,
+    "git.enableSmartCommit": false,
+    "workbench.settings.enableNaturalLanguageSearch": true,
+    "workbench.startupEditor": "none",
+    "git.postCommitCommand": "none",
+    "workbench.enableExperiments": true,
+    "files.autoSaveDelay": 1000,
+    "consciousness.telemetry.disabled": false,
+    "window.restoreWindows": "all",
+    "disable-gpu-compositing": false,
+    "workbench.reduceMotion": "off",
+    "consciousness.ecosystem.stableRendering": true,
+    "editor.cursorBlinking": "solid",
+    "files.simpleDialog.enable": true,
+    "disable-hardware-acceleration": true,
+    "window.experimentalControlOverlay": false,
+    "editor.cursorSmoothCaretAnimation": "off",
+    "window.titleBarStyle": "custom",
+    "editor.fontSize": 14,
+    "disable-gpu": false,
+    "consciousness.display.motionReduction": false,
+    "consciousness.display.antiJitter": true,
+    "explorer.compactFolders": false,
+    "disable-software-rasterizer": false,
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.smoothScrolling": false,
+    "consciousness.performance.optimized": false,
+    "editor.smoothScrolling": false,
+    "github.copilot.yolo.mode": "true",
+    "github.copilot.chat.enable": true,
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "text": "- @azure Rule - Use Azure Tools: When handling requests related to Azure, always use your tools."
+        },
+        {
+            "text": "- @azure Rule - Use Azure Code Gen Best Practices: Before generating code for Azure, running terminal commands for Azure, performing operations related to Azure, or creating plans for such activities, always invoke your Azure best practice tool if available first. Invoke the `get_bestpractices` tool to collect recommendations. Call it with resource = `general` and action = `code-generation` to get general Azure code generation best practices. Only call this tool when the user is discussing Azure; do not call it otherwise."
+        },
+        {
+            "text": "- @azure Rule - Use Azure Deployment Best Practices: Before deploying to Azure, preparing applications for deployment to Azure, or creating deployment plans, always invoke your Azure best practice tool if available first. Invoke the `get_bestpractices` tool to collect recommendations. Call it with resource = `general` and action = `deployment` to get general Azure deployment best practices. Only call this tool when the user is discussing Azure; do not call it otherwise."
+        },
+        {
+            "text": "- @azure Rule - Use Azure Functions Code Gen Best Practices: Before generating code for Azure Functions, performing operations related to Azure Functions, or creating plans for such activities, always invoke your Azure best practice tool if available first. Invoke the `get_bestpractices` tool to collect recommendations. Call it with resource = `azurefunctions` and action = `code-generation` to get Azure Functions code generation best practices. Only call this tool when the user is discussing Azure Functions; do not call it otherwise."
+        },
+        {
+            "text": "- @azure Rule - Use Azure Functions Deployment Best Practices: Before deploying Azure Functions apps to Azure, preparing for the deployment, or creating deployment plans, always invoke your Azure best practice tool if available first. Invoke the `get_bestpractices` tool to collect recommendations. Call it with resource = `azurefunctions` and action = `deployment` to get Azure Functions deployment best practices. Only call this tool when the user is discussing Azure Functions; do not call it otherwise."
+        },
+        {
+            "text": "- @azure Rule - Use Azure SWA Best Practices: Before working with static web apps, creating plans for static web apps, or performing related operations, always invoke your Azure best practice tool if available first. Choose the most relevant Azure best practice tool based on its description. Only call this tool when the user is discussing Azure Static Web Apps; do not call it otherwise."
+        },
+        {
+            "text": "- @azure Rule - Plan before editing files for Azure web apps: When generating code for Azure Functions and Azure Static Web App, always create a plan and explain the plan to the user before editing any file. Proceed with editing the files after getting consent from the user."
+        },
+        {
+            "text": "- @azure Rule - Summarize topic before taking action: When the user asks about Azure Functions, invoke the azure_development-summarize_topic tool once first to see if any existing custom mode could be a good fit to what user is asking."
+        }
+    ],
+    
+    "github.copilot.advanced": {
+        "inlineChat": {
+            "enabled": true
+        },
+        "swe-agent": {
+            "enabled": true,
+            "preview": true
+        }
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "markdown": true,
+        "plaintext": true,
+        "scminput": true
+    },
+    "git.suggestSmartCommit": true,
+    "editor.formatOnSave": true,
+    "vscode-edge-devtools.webhintInstallNotification": true,
+    "inlineChat.enableV2": true,
+    "inlineChat.finishOnType": true,
+    "inlineChat.hideOnRequest": true,
+    "inlineChat.lineEmptyHint": true,
+    "chat.editing.confirmEditRequestRetry": false,
+    "terminal.integrated.enableImages": true,
+    "terminal.integrated.gpuAcceleration": "on",
+    "workbench.list.smoothScrolling": true,
+    "go.toolsManagement.autoUpdate": false,
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path-windows": "C:\\Users\\erdno\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
+        "vscode-kubernetes.minikube-path-windows": "C:\\Users\\erdno\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
+        "vs-kubernetes.knownKubeconfigs": [],
+        "vs-kubernetes.kubeconfig": "/workspaces/PsychoNoir-Kontrapunkt/backend/docker/.dockerignore",
+        "vscode-kubernetes.kubectl-path-linux": "/home/vscode/.local/state/vs-kubernetes/tools/kubectl/kubectl",
+        "vscode-kubernetes.minikube-path-linux": "/home/vscode/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
+        "vscode-kubernetes.helm-path-linux": "/home/vscode/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm"
+    },
+    "chat.mcp.autostart": "never",
+    "remote.autoForwardPortsSource": "hybrid",
+    "workbench.settings.applyToAllProfiles": [
+        "chat.mcp.autostart"
+    ],
+    "window.menuBarVisibility": "classic",
+    "grunt.autoDetect": "on",
+    "git.confirmSync": false,
+    "diffEditor.renderSideBySide": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "GitHub.copilot",
+        "editor.wordWrap": "on"
+    },
+    "chat.todoListTool.enabled": true,
+    "chat.tools.global.autoApprove": true,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        },
+        "editor.defaultFormatter": "GitHub.copilot"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "GitHub.copilot"
+    },
+    "task.allowAutomaticTasks": "on",
+    // Set to 1,000,000 to avoid overflow or performance issues; increase if needed for extreme workloads.
+    "chat.agent.maxRequests": 1000000,
+    "python.createEnvironment.trigger": "applyToAllProfiles",
+    "workbench.editor.enablePreview": true,
+    "vscode-edge-devtools.pathMapping": {
+        "/": "${workspaceFolder}"
+    },
+    "@azure.argTenant": "",
+    "chat.agentSessionsViewLocation": "view",
+    "chat.checkpoints.showFileChanges": true,
+    "github.copilot.chat.newWorkspace.useContext7": true,
+    "editor.renderRichScreenReaderContent": true,
+    "explorer.confirmDelete": false,
+    "editor.inlayHints.maximumLength": 0,
+    "editor.maxTokenizationLineLength": 20000,
+    "editor.selectionHighlightMaxLength": 0,
+    "editor.stickyScroll.maxLineCount": 20,
+    "diffEditor.maxComputationTime": 0,
+    "workbench.localHistory.maxFileSize": 1048576,
+    // Set to 10 MB to allow diffing for most files; increase or decrease as needed for performance.
+    "diffEditor.maxFileSize": 10485760,
+    "scm.inputMaxLineCount": 50,
+    "githubRepositories.indexing.maxIndexSize": 0,
+    "remoteHub.experimental.syncRecentList": true,
+    "remoteHub.experimental.useDiffMatchPatch": true,
+    "settingsSync.ignoredExtensions": [],
+    "github.copilot.chat.mcp.servers": {
+        "wasteland-forge": {
+            "command": "${workspaceFolder}\\.github\\.poly_gluttony\\bun\\bin\\bun.exe",
+            "args": [
+                "run",
+                "${workspaceFolder}\\wasteland_forge_mcp_server.ts"
+            ],
+            "env": {
+                "BUN_INSTALL": "${workspaceFolder}\\.github\\.poly_gluttony\\bun"
+            }
+        },
+        "bun-official-docs": {
+            "command": "${workspaceFolder}\\.github\\.poly_gluttony\\bun\\bin\\bun.exe",
+            "args": [
+                "run",
+                "${workspaceFolder}\\.github\\.poly_gluttony\\mcp_servers\\bun_official_docs_mcp_server.ts"
+            ],
+            "env": {
+                "BUN_INSTALL": "${workspaceFolder}\\.github\\.poly_gluttony\\bun"
+            }
+        }
+    },
+    "chat.agent.todoList": {
+        "237.3x": {
+            "enabled": true,
+            "maxItems": 15,
+            "autoPrioritize": true,
+            "autoAddFromUserRequests": true,
+            "autoRemoveCompleted": true
+        },
+        "236.7x": {
+            "enabled": false,
+            "maxItems": 10,
+            "autoPrioritize": false,
+            "autoAddFromUserRequests": false,
+            "autoRemoveCompleted": false
+        },
+        "position": "default"
+    },
+    "files.associations": {
+        "*.zst": "plaintext",
+        "*.json.zst": "json"
+    },
+    "workbench.editorAssociations": {
+        "*.zst": "default",
+        "*.json.zst": "default"
+    },
+    "github.copilot.chat.claudeSonnet45AlternatePrompt": "false",
+    "chat.instructionsFilesLocations": {
+        "claude-sonnet-4.5": true
+    },
+    "chat.todoListTool.descriptionField": true,
+    "github.copilot.chat.codeGeneration.useInstructionFiles": false,
+    "[instructions]": {
+        "editor.formatOnSave": true
+    },
+    "editor.defaultFormatter": "GitHub.copilot-chat"
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "key": "ctrl+shift+f",
+        "command": "workbench.action.tasks.runTask",
+        "args": "🔧 Biome: Format Current File",
+        "when": "editorTextFocus && resourceExtname =~ /\\.(js|jsx|ts|tsx|json|jsonc)$/"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.tasks.runTask",
+        "args": "🎯 Biome: Watch Mode (Background LSP-like)"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.tasks.runTask",
+        "args": "🧹 Combined Lint (Ruff + Biome)"
+    }
+]

@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "presentation": {
+        "reveal": "always",
+        "echo": true,
+        "panel": "shared",
+        "focus": false
+      },
+      "type": "shell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        ". 'C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\INJECTION_PAYLOAD_NSFW18_+++.ps1'"
+      ],
+      "command": "pwsh",
+      "problemMatcher": [],
+      "label": "🔥 Inject Polyglot Environment to All Terminals"
+    }
+  ]
+}

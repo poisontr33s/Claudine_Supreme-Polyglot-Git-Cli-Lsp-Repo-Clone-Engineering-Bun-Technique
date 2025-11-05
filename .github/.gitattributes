@@ -1,0 +1,19 @@
+# 🔥💀⚓ CLAUDINE COMPRESSION ARTIFACTS PREVENTION
+# Mark ZSTD compressed files as BINARY to prevent text corruption
+
+# ZSTD compressed JSON files
+*.zst binary
+*.json.zst binary
+
+# Other binary compression formats
+*.gz binary
+*.bz2 binary
+*.xz binary
+*.lz4 binary
+
+# Ensure line endings for text files
+*.json text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.ts text eol=lf
+*.js text eol=lf

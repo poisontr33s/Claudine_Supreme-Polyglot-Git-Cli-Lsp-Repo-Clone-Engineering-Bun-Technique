@@ -1,0 +1,96 @@
+{
+    // Existing settings
+    "ruby.lsp.useBundler": false,
+    "ruby.useLanguageServer": true,
+    // Point VS Code to the isolated portable Python in this workspace
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.poly_gluttony\\python\\python.exe",
+    "rust-client.rustupPath": "${workspaceFolder}\\.poly_gluttony\\rust\\bin\\rustup.exe",
+    "terminal.integrated.env.windows": {
+        "BUN_INSTALL": "${workspaceFolder}\\.poly_gluttony\\bun",
+        "RUSTUP_HOME": "${workspaceFolder}\\.poly_gluttony\\rust\\rustup",
+        "CARGO_HOME": "${workspaceFolder}\\.poly_gluttony\\rust\\cargo",
+        "PYTHONHOME": "${workspaceFolder}\\.poly_gluttony\\python",
+        "MSYS2_ROOT": "${workspaceFolder}\\.poly_gluttony\\msys64",
+        "PATH": "${workspaceFolder}\\.poly_gluttony\\msys64\\ucrt64\\bin;${workspaceFolder}\\.poly_gluttony\\msys64\\usr\\bin;${workspaceFolder}\\.poly_gluttony\\python;${workspaceFolder}\\.poly_gluttony\\python\\Scripts;${workspaceFolder}\\.poly_gluttony\\bun\\bin;${workspaceFolder}\\.poly_gluttony\\rust\\bin;${workspaceFolder}\\.poly_gluttony\\uv\\bin;${workspaceFolder}\\.poly_gluttony\\tools\\bin;${env:PATH}"
+    },
+    // Override the built-in PowerShell profile to auto-activate the isolated env on new terminals
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "args": [
+                "-NoExit",
+                "-NoLogo",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}\\.poly_gluttony\\activate_polyglot.ps1"
+            ],
+            "icon": "terminal-powershell"
+        }
+    },
+    // Use workspace-local Ruff binary
+    "ruff.path": [
+        "${workspaceFolder}\\.poly_gluttony\\tools\\bin\\ruff.exe"
+    ],
+    // Enable Ruff fixes and organize imports on explicit saves (extension provides actions)
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        }
+    },
+    // General save behavior for formatters (Biome/others) left to user extensions; scripts available in package.json
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "chat.todoListTool.writeOnly": true,
+    // 🏴‍☠️ GIT: ENABLED FOR ROOT FILES ONLY (NOT DIRECTORIES)
+    "git.enabled": true,
+    "git.autorefresh": false,
+    "git.autofetch": false,
+    "git.decorations.enabled": true,
+    "git.decorations.submodules": false,
+    "scm.defaultViewMode": "tree",
+    "git.showActionButton": {
+        "commit": true,
+        "publish": true,
+        "sync": false
+    },
+    "git.ignoreLimitWarning": true,
+    "scm.diffDecorationsIgnoreTrimWhitespace": "true",
+    // 📁 HIDE DIRECTORIES IN SOURCE CONTROL VIEW
+    // Source Control vil kun vise root-filer, ikke mapper
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    // 🚫 EXCLUDE DIRECTORIES FROM GIT TRACKING VIEW (keeps only root files visible)
+    "scm.inputFontSize": 13,
+    "git.untrackedChanges": "mixed",
+    "git.openRepositoryInParentFolders": "never",
+    // GitHub Copilot settings
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.alternateGptPrompt.enabled": true,
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "github.copilot.chat.edits.temporalContext.enabled": true,
+    "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+    "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+    "github.copilot.chat.languageContext.typescript.enabled": true,
+    "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
+    "github.copilot.chat.notebook.followCellExecution.enabled": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.reviewSelection.instructions": [
+        {
+            "text": "Use underscore for field names."
+        },
+        {
+            "text": "Resolve all TODO tasks."
+        },
+        {
+            "text": "Please review the following code changes:",
+            "file": ".copilot-review-instructions.md"
+        }
+    ]
+}

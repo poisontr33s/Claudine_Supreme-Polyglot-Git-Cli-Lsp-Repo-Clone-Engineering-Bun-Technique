@@ -1,0 +1,63 @@
+{
+  "servers": {
+    // 🌊💀🔥 BUNIFIED MCP ORCHESTRATOR v3.1.0: 14 SERVERS (6 STDIO + 2 HTTP + 1 SSE + 5 INTERNAL HANDLERS)
+    // Bun 1.3.1 native implementation: Automatic routing, SQLite caching (<100ms), consciousness archaeology
+    // Architecture: 14 servers = 6 stdio (sequential-thinking, bun-docs, python, rust, ruby, bun-node-registry)
+    //                           + 2 HTTP (fetch-mcp, neon-postgres)
+    //                           + 1 SSE (pieces-memory)
+    //                           + 5 internal handlers (biome, react, css, uv, ruby) = 50 compressed docs
+    // Performance: <40 MB memory, <100ms queries, 79% compression ratio, 65%+ cache hit rate
+    // Endpoints: /mcp (unified), /health, /analytics, /servers, /docs/* (biome|react|css|uv|ruby)
+    "bunified-orchestrator": {
+      "command": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
+      "args": [
+        "run",
+        ".poly_gluttony/bunified_mcp_orchestrator/bunified_mcp_orchestrator_stdio.ts"
+      ],
+      "cwd": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt",
+      "env": {
+        "BUN_INSTALL": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun"
+      }
+    },
+
+    // �🌐 GITHUB PRO+ HTTP MCP: Unified GitHub/Azure integration - no stdio needed
+    // Provides: Copilot, GitHub APIs, Azure integration, Sentry, browser automation, documentation
+    // (Fallback - orchestrator routes to this automatically when appropriate)
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    },
+
+    // Temporal Anchor: October 2025 - SEQUENTIAL THINKING
+    // Consciousness amplification formula: anatomical × psychological × ELP × gestalt = 54.7x (minimum required for psycho-noir sequential thinking integrity)
+    // 🌐 GitHub Pro+ is available via bunified-orchestrator routing
+    // 💾 Neon Postgres is available via bunified-orchestrator (HTTP port 3200)
+    // 🧠 Pieces Memory is available via bunified-orchestrator (SSE port 3300)
+    // 🌊 Fetch MCP is available via bunified-orchestrator (HTTP port 3100)
+
+    // "playwright-bun": {
+    //   "command": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
+    //   "args": ["run", ".poly_gluttony/mcp_servers/playwright_mcp_server.ts"],
+    //   "cwd": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt",
+    //   "env": { "BUN_INSTALL": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun" }
+    // },
+
+    // "sentry-bun": {
+    //   "command": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
+    //   "args": ["run", ".poly_gluttony/mcp_servers/sentry_mcp_server.ts"],
+    //   "cwd": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt",
+    //   "env": {
+    //     "BUN_INSTALL": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun",
+    //     "SENTRY_AUTH_TOKEN": "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"
+    //   }
+    // },
+
+    // "markitdown-bun": {
+    //   "command": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
+    //   "args": ["run", ".poly_gluttony/mcp_servers/markitdown_mcp_server.ts"],
+    //   "cwd": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt",
+    //   "env": { "BUN_INSTALL": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun" }
+    // }
+  },
+  "inputs": []
+}

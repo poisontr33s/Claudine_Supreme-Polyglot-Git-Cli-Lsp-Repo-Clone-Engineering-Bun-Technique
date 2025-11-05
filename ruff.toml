@@ -1,0 +1,92 @@
+# 🐍💀 RUFF - BRUTAL PYTHON QUALITY ENFORCEMENT
+# PsychoNoir-Kontrapunkt Maximum Strictness Configuration
+# Zero tolerance for code smell, anti-patterns, or laziness
+
+# Line length matching Black
+line-length = 88
+
+# Target Python 3.11+
+target-version = "py311"
+
+# Exclude common directories
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    ".poly_gluttony",
+    "necromancy_graveyard",
+]
+
+[lint]
+# Enable EVERY available linter (60+ rule sets)
+select = ["ALL"]
+
+# Ignore extraneous/annoying rules for personal projects
+ignore = [
+    # Docstring formatting conflicts
+    "D203",    # one-blank-line-before-class (conflicts with D211)
+    "D213",    # multi-line-summary-second-line (conflicts with D212)
+    # Formatter conflicts
+    "COM812",  # trailing-comma (conflicts with formatter)
+    "ISC001",  # single-line-implicit-string-concatenation (conflicts with formatter)
+    # Extraneous requirements for personal projects
+    "CPY001",  # Missing copyright notice - not needed for personal projects
+    "D200",    # One-line docstring should fit on one line - too strict
+    "D415",    # First line should end with period - annoying for short descriptions
+    # Allow TODOs and FIXMEs in development
+    "FIX002",  # Line contains TODO - we want these during development
+    "TD002",   # Missing TODO author - unnecessary for solo projects
+    "TD003",   # Missing TODO link - unnecessary for solo projects
+    # Type annotations - useful but not required everywhere
+    "ANN001",  # Missing type annotation for function argument
+    "ANN201",  # Missing return type annotation for public function
+    "ANN202",  # Missing return type annotation for private function
+]
+
+# Preview mode - enable experimental checks
+preview = true
+
+[lint.per-file-ignores]
+# Test files can use assert and print
+"test_*.py" = ["S101", "T201"]
+"*_test.py" = ["S101", "T201"]
+
+[lint.pydocstyle]
+# Enforce Google docstring convention
+convention = "google"
+
+[lint.pylint]
+# Maximum complexity thresholds - keep code simple
+max-args = 5
+max-branches = 12
+max-returns = 6
+max-statements = 50
+
+[lint.mccabe]
+# Maximum cyclomatic complexity
+max-complexity = 10
+
+[format]
+# Aggressive formatting
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"

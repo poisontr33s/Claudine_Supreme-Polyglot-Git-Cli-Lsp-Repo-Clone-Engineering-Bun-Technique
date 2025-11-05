@@ -1,0 +1,51 @@
+{
+  "name": "@claudine/cli",
+  "version": "2.0.0",
+  "description": "Claudine Polyglot CLI - Professional project management for Python, Rust, Bun, Ruby, React, Node, and Go",
+  "type": "module",
+  "bin": {
+    "claudine": "./dist/claudine.js"
+  },
+  "scripts": {
+    "dev": "bun run --watch src/cli.ts",
+    "build": "bun build src/cli.ts --outfile dist/claudine.js --target bun --minify",
+    "compile": "bun build src/cli.ts --compile --outfile claudine",
+    "compile:all": "bun run compile:windows && bun run compile:linux && bun run compile:macos",
+    "compile:windows": "bun build src/cli.ts --compile --outfile dist/claudine-windows-x64.exe --target bun-windows-x64",
+    "compile:linux": "bun build src/cli.ts --compile --outfile dist/claudine-linux-x64 --target bun-linux-x64",
+    "compile:macos": "bun build src/cli.ts --compile --outfile dist/claudine-darwin-x64 --target bun-darwin-x64",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "lint": "bunx @biomejs/biome check .",
+    "lint:fix": "bunx @biomejs/biome check --write .",
+    "format": "bunx @biomejs/biome format --write .",
+    "typecheck": "bunx tsc --noEmit",
+    "preflight": "bun run typecheck && bun run lint && bun run test && bun run build"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "chalk": "^5.4.1",
+    "ora": "^8.1.1",
+    "prompts": "^2.4.2",
+    "zod": "^3.23.8",
+    "execa": "^9.5.2",
+    "fs-extra": "^11.2.0",
+    "fast-glob": "^3.3.2",
+    "cli-table3": "^0.6.5",
+    "update-notifier": "^7.3.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "latest",
+    "@types/prompts": "^2.4.9",
+    "@types/fs-extra": "^11.0.4",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "bun": ">=1.3.1"
+  }
+}
