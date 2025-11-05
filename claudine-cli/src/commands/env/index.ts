@@ -4,7 +4,9 @@
 
 import { Command } from 'commander';
 import { healthCommand } from './health.js';
+import { statusCommand } from './status.js';
 
 export const envCommand = new Command('env')
   .description('Environment management commands (health check, activation, cleanup)')
-  .addCommand(healthCommand);
+  .addCommand(healthCommand)
+  .addCommand(statusCommand);
