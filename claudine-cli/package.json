@@ -7,7 +7,8 @@
     "claudine": "./dist/claudine.js"
   },
   "scripts": {
-    "dev": "bun run --watch src/cli.ts",
+    "dev": "bun run src/cli.ts",
+    "dev:watch": "bun run --watch src/cli.ts",
     "build": "bun build src/cli.ts --outfile dist/claudine.js --target bun --minify",
     "compile": "bun build src/cli.ts --compile --outfile claudine",
     "compile:all": "bun run compile:windows && bun run compile:linux && bun run compile:macos",
