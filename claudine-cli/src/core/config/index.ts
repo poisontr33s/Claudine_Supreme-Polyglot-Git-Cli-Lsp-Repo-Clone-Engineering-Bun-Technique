@@ -13,6 +13,8 @@ export interface ConfigOptions {
 
 /**
  * Load configuration from .poly_gluttony directory
+ * Note: This function is async to maintain consistency with the orchestrator's
+ * async execution model and to allow for future async operations (e.g., remote config).
  */
 export async function loadConfig(options: ConfigOptions = {}): Promise<ClaudineConfig> {
   return Promise.resolve().then(() => {
@@ -48,6 +50,8 @@ export async function loadConfig(options: ConfigOptions = {}): Promise<ClaudineC
 
 /**
  * Initialize configuration directory
+ * Note: This function is async to maintain consistency with the orchestrator's
+ * async execution model and to allow for future async operations.
  */
 export async function initConfig(options: ConfigOptions = {}): Promise<ClaudineConfig> {
   return Promise.resolve().then(() => {
@@ -76,6 +80,8 @@ export async function initConfig(options: ConfigOptions = {}): Promise<ClaudineC
 
 /**
  * Get current configuration
+ * This is a convenience method that calls loadConfig() with default options.
+ * Provided as a separate function to match the tool registration in orchestrator.
  */
 export async function getConfig(): Promise<ClaudineConfig> {
   return await loadConfig();

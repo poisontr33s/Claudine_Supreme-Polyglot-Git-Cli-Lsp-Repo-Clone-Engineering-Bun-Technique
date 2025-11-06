@@ -19,8 +19,8 @@ export interface InvokeResult {
 
 // Mapping of module names to their file paths
 const MODULE_MAPPING: Record<string, string> = {
-  "@claudine/detector": "../detector/index.js",
-  "@claudine/config": "../config/index.js",
+  "@claudine/detector": "../detector/index",
+  "@claudine/config": "../config/index",
 };
 
 // Tool registry
