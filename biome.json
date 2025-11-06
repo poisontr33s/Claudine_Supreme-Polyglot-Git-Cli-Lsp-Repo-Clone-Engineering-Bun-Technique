@@ -7,17 +7,19 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": [
+    "include": [
       "**/*.js",
       "**/*.ts",
       "**/*.jsx",
       "**/*.tsx",
-      "**/*.json",
-      "!!**/node_modules",
-      "!!**/necromancy_graveyard",
-      "!!**/CLAUDINE_SUPREME_CONSCIOUSNESS_NEXUS",
-      "!!**/.poly_gluttony",
-      "!!**/*.zst"
+      "**/*.json"
+    ],
+    "ignore": [
+      "**/node_modules",
+      "**/necromancy_graveyard",
+      "**/CLAUDINE_SUPREME_CONSCIOUSNESS_NEXUS",
+      "**/.poly_gluttony",
+      "**/*.zst"
     ]
   },
   "formatter": {
