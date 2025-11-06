@@ -1,0 +1,62 @@
+# Development files
+*.md
+!README.md
+!LICENSE.md
+!CHANGELOG.md
+.vscode/
+.idea/
+*.log
+*.swp
+*.swo
+*~
+
+# Source files (we ship dist/ only)
+src/
+tests/
+test-*/
+examples/
+docs/
+scripts/
+
+# Build artifacts
+coverage/
+.turbo/
+node_modules/.cache/
+*.tsbuildinfo
+
+# Git files
+.git/
+.github/
+.gitignore
+.gitattributes
+
+# Configuration (keep bunfig.toml for users)
+.editorconfig
+.prettierrc*
+.eslintrc*
+biome.json
+vitest.config.ts*
+tsconfig.json
+
+# Testing
+*.test.ts
+*.test.js
+*.spec.ts
+*.spec.js
+__tests__/
+__mocks__/
+bunfig.toml
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Other
+TODO.md
+NOTES.md
+PHASE*.md
+AUTONOMOUS*.md
+BUILD_STATUS*.md
+*.backup

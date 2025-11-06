@@ -1,0 +1,20 @@
+{
+  "name": "Bun Basic",
+  "description": "Basic Bun/TypeScript project template",
+  "language": "bun",
+  "variant": "basic",
+  "version": "1.0.0",
+  "files": [
+    "package.json.hbs",
+    "index.ts.hbs",
+    "tsconfig.json.hbs",
+    "README.md.hbs"
+  ],
+  "variables": {
+    "nodeVersion": "20",
+    "bunVersion": "1.3"
+  },
+  "hooks": {
+    "postCreate": "bun install"
+  }
+}

@@ -1,0 +1,261 @@
+name: 🚀 Release & Publish
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (e.g., 2.0.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  packages: write
+  id-token: write
+
+jobs:
+  validate:
+    name: 🔍 Validate Release
+    runs-on: ubuntu-latest
+    
+    outputs:
+      version: ${{ steps.extract.outputs.version }}
+      tag: ${{ steps.extract.outputs.tag }}
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔧 Extract version
+        id: extract
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            VERSION="${{ github.event.inputs.version }}"
+            TAG="v${VERSION}"
+          else
+            TAG="${GITHUB_REF#refs/tags/}"
+            VERSION="${TAG#v}"
+          fi
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "tag=${TAG}" >> $GITHUB_OUTPUT
+          echo "📦 Release version: ${VERSION}"
+          echo "🏷️  Release tag: ${TAG}"
+
+      - name: 🔧 Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.3.1'
+
+      - name: 📦 Install dependencies
+        run: bun install --frozen-lockfile
+        working-directory: claudine-cli
+
+      - name: 🧪 Run all tests
+        run: bun test
+        working-directory: claudine-cli
+
+      - name: 🔍 Verify package.json version
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          if [[ "${PKG_VERSION}" != "${{ steps.extract.outputs.version }}" ]]; then
+            echo "❌ Version mismatch: package.json has ${PKG_VERSION}, expected ${{ steps.extract.outputs.version }}"
+            exit 1
+          fi
+          echo "✅ Version verified: ${PKG_VERSION}"
+        working-directory: claudine-cli
+
+  build-executables:
+    name: 🏗️ Build Executables (${{ matrix.platform }})
+    runs-on: ${{ matrix.os }}
+    needs: validate
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            platform: windows-x64
+            ext: .exe
+          - os: windows-latest
+            platform: windows-arm64
+            ext: .exe
+          - os: ubuntu-latest
+            platform: linux-x64
+            ext: ''
+          - os: ubuntu-latest
+            platform: linux-arm64
+            ext: ''
+          - os: macos-latest
+            platform: darwin-x64
+            ext: ''
+          - os: macos-latest
+            platform: darwin-arm64
+            ext: ''
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.3.1'
+
+      - name: 📦 Install dependencies
+        run: bun install --frozen-lockfile
+        working-directory: claudine-cli
+
+      - name: 🏗️ Compile executable (${{ matrix.platform }})
+        run: bun run compile:${{ matrix.platform }}
+        working-directory: claudine-cli
+
+      - name: 🎁 Package executable
+        run: |
+          mkdir -p release
+          cp dist/claudine-${{ matrix.platform }}${{ matrix.ext }} release/
+          cd release
+          if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
+            7z a claudine-${{ matrix.platform }}.zip claudine-${{ matrix.platform }}${{ matrix.ext }}
+          else
+            tar czf claudine-${{ matrix.platform }}.tar.gz claudine-${{ matrix.platform }}${{ matrix.ext }}
+          fi
+        working-directory: claudine-cli
+        shell: bash
+
+      - name: 📤 Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: executable-${{ matrix.platform }}
+          path: |
+            claudine-cli/release/*.zip
+            claudine-cli/release/*.tar.gz
+          retention-days: 7
+
+  publish-npm:
+    name: 📦 Publish to npm
+    runs-on: ubuntu-latest
+    needs: [validate, build-executables]
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.3.1'
+
+      - name: 🔧 Setup Node.js (for npm publish)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: 📦 Install dependencies
+        run: bun install --frozen-lockfile
+        working-directory: claudine-cli
+
+      - name: 🏗️ Build production bundle
+        run: bun run build:prod
+        working-directory: claudine-cli
+
+      - name: 🚀 Publish to npm
+        run: npm publish --access public
+        working-directory: claudine-cli
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  create-github-release:
+    name: 📝 Create GitHub Release
+    runs-on: ubuntu-latest
+    needs: [validate, build-executables, publish-npm]
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 📥 Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: release-artifacts
+
+      - name: 📝 Generate release notes
+        id: notes
+        run: |
+          VERSION="${{ needs.validate.outputs.version }}"
+          
+          # Extract CHANGELOG section for this version
+          sed -n "/## \[${VERSION}\]/,/## \[/p" claudine-cli/CHANGELOG.md | \
+            sed '$d' > release-notes.md
+          
+          # Add download instructions
+          cat >> release-notes.md << EOF
+          
+          ---
+          
+          ## 📦 Installation
+          
+          ### Via npm (recommended)
+          \`\`\`bash
+          npm install -g @claudine/cli@${VERSION}
+          \`\`\`
+          
+          ### Standalone Executables
+          
+          Download the executable for your platform below:
+          
+          - **Windows x64**: \`claudine-windows-x64.zip\`
+          - **Windows ARM64**: \`claudine-windows-arm64.zip\`
+          - **Linux x64**: \`claudine-linux-x64.tar.gz\`
+          - **Linux ARM64**: \`claudine-linux-arm64.tar.gz\`
+          - **macOS x64 (Intel)**: \`claudine-darwin-x64.tar.gz\`
+          - **macOS ARM64 (Apple Silicon)**: \`claudine-darwin-arm64.tar.gz\`
+          
+          Extract and run:
+          \`\`\`bash
+          # Linux/macOS
+          tar xzf claudine-*.tar.gz
+          chmod +x claudine-*
+          ./claudine-* --version
+          
+          # Windows
+          # Extract ZIP and run claudine-*.exe
+          \`\`\`
+          EOF
+
+      - name: 🚀 Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.validate.outputs.tag }}
+          name: Claudine CLI ${{ needs.validate.outputs.version }}
+          body_path: release-notes.md
+          draft: false
+          prerelease: false
+          files: |
+            release-artifacts/**/*.zip
+            release-artifacts/**/*.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  announce:
+    name: 📣 Announce Release
+    runs-on: ubuntu-latest
+    needs: [validate, create-github-release]
+    
+    steps:
+      - name: 📣 Release announcement
+        run: |
+          VERSION="${{ needs.validate.outputs.version }}"
+          echo "🎉 Claudine CLI v${VERSION} has been released!"
+          echo ""
+          echo "📦 npm: https://www.npmjs.com/package/@claudine/cli"
+          echo "🐙 GitHub: https://github.com/${{ github.repository }}/releases/tag/${{ needs.validate.outputs.tag }}"
+          echo ""
+          echo "Install: npm install -g @claudine/cli@${VERSION}"

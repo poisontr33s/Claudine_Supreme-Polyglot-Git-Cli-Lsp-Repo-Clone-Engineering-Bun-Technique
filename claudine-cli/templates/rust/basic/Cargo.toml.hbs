@@ -1,0 +1,11 @@
+[package]
+name = "{{kebab projectName}}"
+version = "{{version}}"
+edition = "{{rustEdition}}"
+{{#if author}}authors = ["{{author}}{{#if email}} <{{email}}>{{/if}}"]{{/if}}
+{{#if license}}license = "{{license}}"{{/if}}
+{{#if description}}description = "{{description}}"{{/if}}
+
+[dependencies]
+
+[dev-dependencies]

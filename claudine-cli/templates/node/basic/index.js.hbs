@@ -1,0 +1,21 @@
+/**
+ * {{projectName}}{{#if description}} - {{description}}{{/if}}
+ * {{#if author}}
+ * @author {{author}}{{#if email}} <{{email}}>{{/if}}
+ * {{/if}}
+ * @license {{license}}
+ */
+
+async function main() {
+  console.log('Hello from {{projectName}}!');
+  console.log('🔥💋 Running on Node.js', process.version);
+  
+  // Example: Environment configuration
+  const env = process.env.NODE_ENV || 'development';
+  console.log(`Environment: ${env}`);
+}
+
+main().catch((error) => {
+  console.error('Error:', error);
+  process.exit(1);
+});

@@ -1,0 +1,18 @@
+{
+  "name": "Rust Basic Template",
+  "description": "Basic Rust project with Cargo",
+  "language": "rust",
+  "variant": "basic",
+  "version": "1.0.0",
+  "files": [
+    "src/main.rs.hbs",
+    "Cargo.toml.hbs",
+    "README.md.hbs"
+  ],
+  "variables": {
+    "rustEdition": "2021"
+  },
+  "hooks": {
+    "postCreate": "cargo check"
+  }
+}

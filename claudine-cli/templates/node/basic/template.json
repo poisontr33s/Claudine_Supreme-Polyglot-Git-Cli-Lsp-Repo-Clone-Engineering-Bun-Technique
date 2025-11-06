@@ -1,0 +1,19 @@
+{
+  "name": "Node.js Basic",
+  "description": "Basic Node.js project template",
+  "language": "node",
+  "variant": "basic",
+  "version": "1.0.0",
+  "files": [
+    "package.json.hbs",
+    "index.js.hbs",
+    "README.md.hbs",
+    ".nvmrc.hbs"
+  ],
+  "variables": {
+    "nodeVersion": "20"
+  },
+  "hooks": {
+    "postCreate": "npm install"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Ruby Basic",
+  "description": "Basic Ruby project template",
+  "language": "ruby",
+  "variant": "basic",
+  "version": "1.0.0",
+  "files": [
+    "Gemfile.hbs",
+    "main.rb.hbs",
+    "README.md.hbs",
+    ".ruby-version.hbs"
+  ],
+  "variables": {
+    "rubyVersion": "3.3.0"
+  },
+  "hooks": {
+    "postCreate": "bundle install"
+  }
+}

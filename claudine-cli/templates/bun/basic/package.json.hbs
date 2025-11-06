@@ -1,0 +1,19 @@
+{
+  "name": "{{kebab projectName}}",
+  "version": "{{version}}",
+  "description": "{{description}}",
+  {{#if author}}
+  "author": "{{author}}{{#if email}} <{{email}}>{{/if}}",
+  {{/if}}
+  "license": "{{license}}",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch index.ts",
+    "start": "bun run index.ts",
+    "build": "bun build ./index.ts --outdir ./dist --target bun",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.0"
+  }
+}

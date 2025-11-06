@@ -1,0 +1,31 @@
+{
+  "id": "docker-compose-plugin",
+  "name": "Docker Compose Plugin",
+  "version": "1.0.0",
+  "description": "Adds Docker Compose templates and commands to Claudine CLI",
+  "author": "Claudine Team",
+  "minimumCliVersion": "2.0.0",
+  "activationEvents": [
+    "onStartup",
+    "onCommand:project",
+    "onTemplate:docker"
+  ],
+  "capabilities": {
+    "commands": true,
+    "templates": true,
+    "tools": false,
+    "languages": false
+  },
+  "configSchema": {
+    "composeVersion": {
+      "type": "string",
+      "default": "3.8",
+      "description": "Default Docker Compose file version"
+    },
+    "includeHealthcheck": {
+      "type": "boolean",
+      "default": true,
+      "description": "Include healthcheck configuration by default"
+    }
+  }
+}

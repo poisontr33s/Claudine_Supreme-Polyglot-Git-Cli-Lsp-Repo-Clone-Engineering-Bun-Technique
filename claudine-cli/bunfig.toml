@@ -1,0 +1,22 @@
+# Bun Configuration
+# https://bun.sh/docs/runtime/bunfig
+
+[test]
+# Enable coverage reporting by default
+coverage = true  # Always enable coverage reporting
+
+# Coverage thresholds (80% for lines, functions, and statements)
+# Exit with non-zero code if coverage is below threshold
+coverageThreshold = { line = 0.8, function = 0.8, statement = 0.8 }
+
+# Coverage reporters: text (console) and lcov (CI/tools)
+coverageReporter = ["text", "lcov"]
+
+# Coverage output directory
+coverageDir = "coverage"
+
+# Ignore test files from coverage
+coverageSkipTestFiles = true
+
+# Use sourcemaps for accurate coverage reporting
+coverageIgnoreSourcemaps = false

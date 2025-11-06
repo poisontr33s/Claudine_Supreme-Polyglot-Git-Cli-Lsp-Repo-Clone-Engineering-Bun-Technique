@@ -1,0 +1,24 @@
+{
+  "name": "React Vite",
+  "description": "React + TypeScript + Vite project template",
+  "language": "react",
+  "variant": "vite",
+  "version": "1.0.0",
+  "files": [
+    "package.json.hbs",
+    "index.html.hbs",
+    "vite.config.ts.hbs",
+    "tsconfig.json.hbs",
+    "src/main.tsx.hbs",
+    "src/App.tsx.hbs",
+    "src/App.css.hbs",
+    "README.md.hbs"
+  ],
+  "variables": {
+    "nodeVersion": "20",
+    "reactVersion": "18"
+  },
+  "hooks": {
+    "postCreate": "bun install"
+  }
+}

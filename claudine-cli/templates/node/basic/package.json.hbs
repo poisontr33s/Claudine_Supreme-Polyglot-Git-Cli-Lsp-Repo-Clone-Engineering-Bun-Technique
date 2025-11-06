@@ -1,0 +1,19 @@
+{
+  "name": "{{kebab projectName}}",
+  "version": "{{version}}",
+  "description": "{{description}}",
+  {{#if author}}
+  "author": "{{author}}{{#if email}} <{{email}}>{{/if}}",
+  {{/if}}
+  "license": "{{license}}",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

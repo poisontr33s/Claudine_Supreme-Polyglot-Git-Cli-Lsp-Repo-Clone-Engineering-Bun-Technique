@@ -1,0 +1,19 @@
+{
+  "name": "Python Basic Template",
+  "description": "Basic Python project with UV package manager",
+  "language": "python",
+  "variant": "basic",
+  "version": "1.0.0",
+  "files": [
+    "main.py.hbs",
+    "README.md.hbs",
+    "pyproject.toml.hbs",
+    ".python-version.hbs"
+  ],
+  "variables": {
+    "pythonVersion": "3.12"
+  },
+  "hooks": {
+    "postCreate": "uv sync"
+  }
+}
