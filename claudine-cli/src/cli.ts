@@ -17,6 +17,10 @@ import { fileURLToPath } from 'url';
 // Import commands
 import { projectCommand } from './commands/project/index.js';
 import { envCommand } from './commands/env/index.js';
+import { createCommand } from './commands/create.js';
+import { activateCommand } from './commands/activate.js';
+import { registerHealthCommand } from './commands/health.js';
+import { registerDetectCommand } from './commands/detect.js';
 // import { lintCommand } from './commands/lint/index.js';
 // import { utilsCommand } from './commands/utils/index.js';
 
@@ -57,6 +61,10 @@ ${chalk.dim('⚡ Built with Bun 1.3.1 • Inspired by Gemini CLI architecture')}
 // Add commands
 program.addCommand(projectCommand);
 program.addCommand(envCommand);
+program.addCommand(createCommand);
+program.addCommand(activateCommand);
+registerHealthCommand(program);
+registerDetectCommand(program);
 // program.addCommand(lintCommand);
 // program.addCommand(utilsCommand);
 
