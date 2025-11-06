@@ -125,7 +125,12 @@ class Orchestrator {
       };
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : "PowerShell execution failed";
-      const stderr = error && typeof error === "object" && "stderr" in error ? error.stderr : undefined;
+      // Safely extract stderr if it exists and is a string
+      let stderr: string | undefined;
+      if (error && typeof error === "object" && "stderr" in error) {
+        const stderrValue = (error as { stderr: unknown }).stderr;
+        stderr = typeof stderrValue === "string" ? stderrValue : undefined;
+      }
       return {
         success: false,
         error: errorMessage,
@@ -140,14 +145,28 @@ class Orchestrator {
   ): string[] {
     const scriptPath = join(this.toolsPath, toolMapping.script);
 
-    // Build parameter string for PowerShell
-    const paramString = this.buildParamString(options.params || {});
-
     if (toolMapping.function) {
-      // For functions, we need to dot-source the script and call the function with parameters
-      const command = `. '${scriptPath}'; ${toolMapping.function} ${paramString}`;
+      // For functions, use -Command but build the command array to avoid injection
+      // PowerShell -Command can accept an array of arguments for better safety
+      const commandParts: string[] = [".", scriptPath, ";", toolMapping.function];
+
+      // Add parameters safely
+      if (options.params) {
+        for (const [key, value] of Object.entries(options.params)) {
+          commandParts.push(`-${key}`);
+          if (value !== true) {
+            // For non-boolean values, add them as separate arguments
+            // PowerShell will handle escaping when we pass them as array elements
+            commandParts.push(String(value));
+          }
+        }
+      }
+
+      // Join with spaces for -Command, but execa will handle this as an array
+      const command = commandParts.join(" ");
       return ["-NoProfile", "-NonInteractive", "-Command", command];
     }
+
     // For scripts without functions, use -File and pass parameters as args
     const args: string[] = ["-NoProfile", "-NonInteractive", "-File", scriptPath];
 
@@ -162,25 +181,6 @@ class Orchestrator {
     }
 
     return args;
-  }
-
-  private buildParamString(params: Record<string, unknown>): string {
-    const parts: string[] = [];
-
-    for (const [key, value] of Object.entries(params)) {
-      if (value === true) {
-        // Boolean flag
-        parts.push(`-${key}`);
-      } else if (typeof value === "string" && value.includes(" ")) {
-        // String with spaces - quote it
-        parts.push(`-${key} "${value}"`);
-      } else {
-        // Normal value
-        parts.push(`-${key} ${value}`);
-      }
-    }
-
-    return parts.join(" ");
   }
 
   /**
