@@ -133,7 +133,7 @@ async function detectLanguages(projectPath: string) {
 
   // Convert Set to Array
   const detectedLanguages: Array<{ language: string; confidence: number }> = [];
-  for (const lang of languageSet) {
+  for (const lang of Array.from(languageSet)) {
     detectedLanguages.push({ language: lang, confidence: 1.0 });
   }
 
