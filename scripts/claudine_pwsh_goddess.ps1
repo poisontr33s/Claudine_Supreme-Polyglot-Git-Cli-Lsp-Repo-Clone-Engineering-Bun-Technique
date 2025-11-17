@@ -55,9 +55,11 @@
 #   list-claudine   - Show all Claudine commands
 #   claudine-help   - Detailed usage guide
 
-$ClaudineVersion = "7.0.0"
-$ClaudineRoot = "C:\Users\erdno\PsychoNoir-Kontrapunkt\.poly_gluttony"
-$ClaudineWorkspace = "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+$ClaudineVersion = "8.0.0"
+# Dynamic repository root detection (portable across machines/users)
+. (Join-Path $PSScriptRoot "Get-RepositoryRoot.ps1")
+$ClaudineWorkspace = Get-RepositoryRoot -StartPath $PSScriptRoot
+$ClaudineRoot = Join-Path $ClaudineWorkspace ".poly_gluttony"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # PYTHON PROJECT CREATION
@@ -514,7 +516,7 @@ function new-react {
 
     .DESCRIPTION
     Creates a React project using Bun's native React support with optional enhancements:
-    - Bun 1.3.1+ native React (no Vite/Webpack needed)
+    - Bun 1.3.2+ native React (no Vite/Webpack needed)
     - TypeScript support (default)
     - Optional Tailwind CSS integration (PostCSS)
     - Optional Vercel deployment configuration

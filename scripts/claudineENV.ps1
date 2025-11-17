@@ -1,4 +1,4 @@
-# claudineENV.ps1 v1.1.0 - Polyglot Environment Activation
+# claudineENV.ps1 v2.0.0 - Polyglot Environment Activation (Isolated/Portable)
 # Docs: .poly_gluttony/claudine_docs/claudineENV_REFERENCE.md
 
 param(
@@ -9,7 +9,10 @@ param(
     [switch]$ShowMetrics
 )
 
-$POLYGLOT_ROOT = "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+# DYNAMIC PATH RESOLUTION - Repository root detection for isolated environments
+# This enables portability across machines, users, and repository locations
+. (Join-Path $PSScriptRoot "Get-RepositoryRoot.ps1")
+$POLYGLOT_ROOT = Get-RepositoryRoot -StartPath $PSScriptRoot
 $POLYGLOT_DIR = Join-Path $POLYGLOT_ROOT ".poly_gluttony"
 
 # Error handling setup
@@ -25,14 +28,39 @@ if (-not (Test-Path $POLYGLOT_DIR)) {
 
 # Set marker for diagnostics
 $env:CLAUDINE_ACTIVATED = "claudineENV.ps1"
-$env:CLAUDINE_VERSION = "1.1.0"
+$env:CLAUDINE_VERSION = "2.0.0"  # Updated for isolated/portable environments
 $env:CLAUDINE_ROOT = $POLYGLOT_DIR
+$env:CLAUDINE_REPO_ROOT = $POLYGLOT_ROOT  # Expose repository root for debugging
 
 # VS Code Shell Integration (MUST BE FIRST)
+# Dynamic detection: Try env var first, then common paths
 if ($env:VSCODE_SHELL_INTEGRATION -and $env:VSCODE_NONCE) {
-    $shellIntegrationScript = "C:\Users\erdno\meta_automata_env\VSCode\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1"
-    if (Test-Path $shellIntegrationScript) {
-        try { . $shellIntegrationScript } catch {}
+    $shellIntegrationScript = $null
+    
+    # Strategy 1: Use VSCODE_INSTALLATION if set
+    if ($env:VSCODE_INSTALLATION) {
+        $shellIntegrationScript = Join-Path $env:VSCODE_INSTALLATION "resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1"
+    }
+    
+    # Strategy 2: Fallback to common installation paths
+    if (-not $shellIntegrationScript -or -not (Test-Path $shellIntegrationScript)) {
+        $vscodeCommonPaths = @(
+            "$env:LOCALAPPDATA\Programs\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1",
+            "C:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1",
+            "$env:USERPROFILE\meta_automata_env\VSCode\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1"
+        )
+        
+        foreach ($path in $vscodeCommonPaths) {
+            if (Test-Path $path) {
+                $shellIntegrationScript = $path
+                break
+            }
+        }
+    }
+    
+    # Attempt integration if found
+    if ($shellIntegrationScript -and (Test-Path $shellIntegrationScript)) {
+        try { . $shellIntegrationScript } catch { Write-Verbose "VS Code shell integration failed silently" }
     }
 }
 
@@ -364,8 +392,14 @@ function global:claudine-versions {
 }
 
 function global:claudine-functions {
-    $polyglotDir = "C:\Users\erdno\PsychoNoir-Kontrapunkt\.poly_gluttony"
-    $functionsLib = Join-Path $polyglotDir "claudineENV_F.ps1"
+    # Functions library is in scripts/ directory
+    $repoRoot = if ($env:CLAUDINE_REPO_ROOT) {
+        $env:CLAUDINE_REPO_ROOT
+    } else {
+        Get-RepositoryRoot -StartPath $PSScriptRoot
+    }
+    
+    $functionsLib = Join-Path $repoRoot "scripts\claudineENV_F.ps1"
     if (Test-Path $functionsLib) {
         . $functionsLib
         Write-Host "✅ Functions loaded! Try: list-claudine" -ForegroundColor Green

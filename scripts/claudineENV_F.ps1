@@ -1,9 +1,20 @@
-# claudineENV_F.ps1 v1.0.0 - Functions Library
+# claudineENV_F.ps1 v2.0.0 - Functions Library (Isolated/Portable)
 # Docs: .poly_gluttony/claudine_docs/claudineENV_F_REFERENCE.md
 
-$ClaudineVersion = "1.0.0"
-$ClaudineRoot = "C:\Users\erdno\PsychoNoir-Kontrapunkt\.poly_gluttony"
-$ClaudineWorkspace = "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+# DYNAMIC PATH RESOLUTION - Use environment variables set by claudineENV.ps1
+# Fallback to dynamic detection if not already activated
+if ($env:CLAUDINE_REPO_ROOT -and $env:CLAUDINE_ROOT) {
+    # Already activated by claudineENV.ps1
+    $ClaudineWorkspace = $env:CLAUDINE_REPO_ROOT
+    $ClaudineRoot = $env:CLAUDINE_ROOT
+} else {
+    # Standalone execution - perform dynamic detection
+    . (Join-Path $PSScriptRoot "Get-RepositoryRoot.ps1")
+    $ClaudineWorkspace = Get-RepositoryRoot -StartPath $PSScriptRoot
+    $ClaudineRoot = Join-Path $ClaudineWorkspace ".poly_gluttony"
+}
+
+$ClaudineVersion = "2.0.0"  # Updated for isolated/portable environments
 $ClaudineTemp = Join-Path $ClaudineWorkspace "Temp"
 
 # HELPER FUNCTIONS
@@ -559,29 +570,29 @@ func main() {
         Set-Content -Path ".gitignore" -Value "# Binaries for programs and plugins`n*.exe`n*.exe~`n*.dll`n*.so`n*.dylib`n`n# Test binary`n*.test`n`n# Output of the go build`n$dirName`n`n# Go workspace`ngo.work`n"
         
         # Create README
-        $readme = @"
-# $Name
+        $readme = @'
+# {0}
 
 A Go module created with Claudine.
 
 ## Build
 
-\`\`\`bash
+```bash
 go build
-\`\`\`
+```
 
 ## Run
 
-\`\`\`bash
+```bash
 go run .
-\`\`\`
+```
 
 ## Test
 
-\`\`\`bash
+```bash
 go test ./...
-\`\`\`
-"@
+```
+'@ -f $Name
         Set-Content -Path "README.md" -Value $readme
         
         $duration = (Get-Date) - $startTime

@@ -36,10 +36,12 @@ param(
 $ErrorActionPreference = "Stop"
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# CONFIGURATION
+# CONFIGURATION - DYNAMIC PATH RESOLUTION
 # ═══════════════════════════════════════════════════════════════════════════════
 
-$workspaceRoot = "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+# Detect repository root dynamically for portability
+. (Join-Path $PSScriptRoot "Get-RepositoryRoot.ps1")
+$workspaceRoot = Get-RepositoryRoot -StartPath $PSScriptRoot
 $scriptsFolder = Join-Path $workspaceRoot "scripts"
 $polyGluttonyFolder = Join-Path $workspaceRoot ".poly_gluttony"
 $archiveFolder = Join-Path $polyGluttonyFolder "archive"
