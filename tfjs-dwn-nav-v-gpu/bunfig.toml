@@ -1,0 +1,12 @@
+# Bun 1.3.3 configuration for tfjs-dwn-nav-v-gpu
+
+[install]
+peer = true
+production = false
+
+[install.cache]
+dir = ".bun-cache"
+
+[test]
+coverage = true
+coverageDir = "coverage"
