@@ -1,0 +1,54 @@
+{
+  "name": "tfjs-dwn-nav-v-gpu",
+  "version": "0.1.0",
+  "description": "GPU-accelerated TensorFlow.js for Bun via Dawn/Vulkan",
+  "type": "module",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "bun": "./src/index.ts",
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "test": "bun test",
+    "typecheck": "bun x tsc --noEmit"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "@tensorflow/tfjs-backend-webgpu": "^4.22.0",
+    "bun-webgpu": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "bun": ">=1.3.3"
+  },
+  "keywords": [
+    "bun",
+    "tensorflow",
+    "tfjs",
+    "webgpu",
+    "vulkan",
+    "dawn",
+    "gpu",
+    "machine-learning",
+    "ml"
+  ],
+  "author": "poisontr33s",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/poisontr33s/bun-ify.git",
+    "directory": "tfjs-dwn-nav-v-gpu"
+  },
+  "engines": {
+    "bun": ">=1.3.3"
+  }
+}
