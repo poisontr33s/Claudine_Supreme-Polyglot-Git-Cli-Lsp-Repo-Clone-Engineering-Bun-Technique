@@ -56,7 +56,7 @@ export const colors = {
       chalk.magenta,
     ];
     return text.split('').map((char, i) => 
-      colors[i % colors.length](char)
+      colors[i % colors.length]!(char)
     ).join('');
   },
 };

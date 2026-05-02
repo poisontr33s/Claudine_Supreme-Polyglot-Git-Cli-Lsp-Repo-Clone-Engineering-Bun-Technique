@@ -28,7 +28,7 @@ export function createSpinner(options: SpinnerOptions): Ora {
     text: options.text,
     prefixText: options.prefixText,
     color: options.color || 'cyan',
-    spinner: options.spinner || 'dots',
+    spinner: (options.spinner || 'dots') as any,
   });
   
   return spinner;

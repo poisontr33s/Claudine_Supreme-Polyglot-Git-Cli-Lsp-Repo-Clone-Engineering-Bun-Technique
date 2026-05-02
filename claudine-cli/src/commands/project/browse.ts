@@ -67,7 +67,7 @@ async function browseAction(): Promise<void> {
     console.log();
   } catch (error) {
     if (error instanceof Error) {
-      logger.error("Failed to browse templates", { error: error.message });
+      logger.error("Failed to browse templates", error as Error);
       console.error(colors.error(`\n✗ Error: ${error.message}\n`));
     }
     process.exit(1);

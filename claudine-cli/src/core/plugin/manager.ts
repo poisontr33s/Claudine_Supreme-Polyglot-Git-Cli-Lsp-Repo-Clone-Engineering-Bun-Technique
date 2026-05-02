@@ -215,7 +215,7 @@ export class PluginManager {
       };
     } catch (error) {
       const err = error instanceof Error ? error : new Error(String(error));
-      logger.error("Failed to load plugin", { path: pluginPath, error: err.message });
+      logger.error("Failed to load plugin", err, { path: pluginPath });
       
       return {
         success: false,
@@ -253,10 +253,7 @@ export class PluginManager {
       return true;
     } catch (error) {
       const err = error instanceof Error ? error : new Error(String(error));
-      logger.error("Failed to activate plugin", {
-        id: plugin.manifest.id,
-        error: err.message,
-      });
+      logger.error("Failed to activate plugin", err, { id: plugin.manifest.id });
       
       return false;
     }
@@ -286,7 +283,7 @@ export class PluginManager {
       return true;
     } catch (error) {
       const err = error instanceof Error ? error : new Error(String(error));
-      logger.error("Failed to deactivate plugin", { id: pluginId, error: err.message });
+      logger.error("Failed to deactivate plugin", err, { id: pluginId });
       
       return false;
     }
@@ -318,16 +315,16 @@ export class PluginManager {
     
     return {
       debug: (message: string, ...args: unknown[]) => {
-        logger.debug(`${prefix} ${message}`, ...args);
+        logger.debug(`${prefix} ${message}`, args[0] as Record<string, any>);
       },
       info: (message: string, ...args: unknown[]) => {
-        logger.info(`${prefix} ${message}`, ...args);
+        logger.info(`${prefix} ${message}`, args[0] as Record<string, any>);
       },
       warn: (message: string, ...args: unknown[]) => {
-        logger.warn(`${prefix} ${message}`, ...args);
+        logger.warn(`${prefix} ${message}`, args[0] as Record<string, any>);
       },
       error: (message: string, ...args: unknown[]) => {
-        logger.error(`${prefix} ${message}`, ...args);
+        logger.error(`${prefix} ${message}`, args[0] as Error, args[1] as Record<string, any>);
       },
     };
   }

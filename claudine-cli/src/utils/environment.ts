@@ -176,7 +176,7 @@ async function getToolVersion(command: string, versionFlag: string): Promise<str
       // Extract version from output (first line usually contains version)
       const output = result.stdout.toString().trim();
       const lines = output.split("\n");
-      return lines[0].trim();
+      return lines[0]!.trim();
     }
   } catch {
     // Ignore errors
@@ -197,7 +197,7 @@ async function getToolPath(command: string): Promise<string | undefined> {
     if (result.exitCode === 0) {
       const output = result.stdout.toString().trim();
       // Return first path if multiple paths found (Windows where returns all matches)
-      return output.split("\n")[0].trim();
+      return output.split("\n")[0]!.trim();
     }
   } catch {
     // Ignore errors

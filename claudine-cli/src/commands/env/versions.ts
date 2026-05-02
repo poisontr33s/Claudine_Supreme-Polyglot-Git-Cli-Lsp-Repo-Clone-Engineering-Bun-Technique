@@ -220,7 +220,9 @@ async function upgradeTool(tool: ToolVersion): Promise<boolean> {
   }
 
   try {
-    const [command, ...args] = tool.upgradeCommand.split(" ");
+    const _upgradeParts = tool.upgradeCommand.split(" ");
+    const command = _upgradeParts[0]!;
+    const args = _upgradeParts.slice(1);
     const { exitCode } = await execa(command, args, {
       stdio: "inherit",
       timeout: 300000, // 5 minutes

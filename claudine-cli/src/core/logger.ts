@@ -256,7 +256,7 @@ export class Logger {
       await writeFile(this.logFile, lines, { flag: 'a' });
     } catch (error) {
       // Fail silently to avoid log loops
-      console.error(chalk.dim(`[Logger] Failed to write to file: ${error.message}`));
+      console.error(chalk.dim(`[Logger] Failed to write to file: ${error instanceof Error ? error.message : String(error)}`));
     }
   }
 

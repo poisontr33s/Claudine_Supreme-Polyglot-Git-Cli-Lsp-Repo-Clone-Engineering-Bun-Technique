@@ -152,14 +152,14 @@ export class Storage {
     
     // Get or create nested object
     let current: any = {};
-    const existing = this.cache.get(keys[0]);
+    const existing = this.cache.get(keys[0]!);
     if (existing && typeof existing === 'object') {
       current = { ...existing };
     }
 
     let pointer = current;
     for (let i = 1; i < keys.length; i++) {
-      const key = keys[i];
+      const key = keys[i]!;
       if (!pointer[key] || typeof pointer[key] !== 'object') {
         pointer[key] = {};
       }
@@ -167,7 +167,7 @@ export class Storage {
     }
 
     pointer[lastKey] = value;
-    this.cache.set(keys[0], current);
+    this.cache.set(keys[0]!, current);
 
     if (this.autoSave) {
       this.scheduleSave();

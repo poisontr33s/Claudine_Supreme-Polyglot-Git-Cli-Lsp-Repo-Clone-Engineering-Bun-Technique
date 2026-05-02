@@ -84,7 +84,7 @@ export const newProjectCommand = new Command("new")
         console.log(chalk.red(`\n❌ Invalid project type: ${typeArg}`));
         console.log(chalk.gray("Available types: python, rust, bun, ruby, react, node, go\n"));
       } else {
-        console.log(chalk.red(`\n❌ Error: ${error.message}\n`));
+        console.log(chalk.red(`\n❌ Error: ${(error as Error).message}\n`));
       }
       process.exit(1);
     }

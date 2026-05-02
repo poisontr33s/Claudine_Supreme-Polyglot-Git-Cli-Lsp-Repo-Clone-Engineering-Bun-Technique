@@ -91,14 +91,14 @@ async function checkTool(toolCheck: ToolCheck): Promise<ToolStatus> {
     });
 
     // Extract version (first line, cleaned)
-    const version = versionOutput.split("\n")[0].trim();
+    const version = versionOutput.split("\n")[0]!.trim();
 
     // Try to get path (platform-specific)
     let path: string | undefined;
     try {
       const whichCommand = process.platform === "win32" ? "where" : "which";
       const { stdout: pathOutput } = await execa(whichCommand, [toolCheck.command]);
-      path = pathOutput.split("\n")[0].trim();
+      path = pathOutput.split("\n")[0]!.trim();
     } catch {
       // Path lookup failed, not critical
     }

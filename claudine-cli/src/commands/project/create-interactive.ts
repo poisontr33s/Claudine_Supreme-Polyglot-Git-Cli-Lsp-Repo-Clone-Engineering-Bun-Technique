@@ -54,7 +54,7 @@ async function createInteractiveAction(): Promise<void> {
     console.log();
   } catch (error) {
     if (error instanceof Error) {
-      logger.error("Failed to create project", { error: error.message });
+      logger.error("Failed to create project", error as Error);
       console.error(colors.error(`\n✗ Error: ${error.message}\n`));
     }
     process.exit(1);

@@ -45,7 +45,7 @@ async function wizardAction(): Promise<void> {
     console.log();
   } catch (error) {
     if (error instanceof Error) {
-      logger.error("Failed to run config wizard", { error: error.message });
+      logger.error("Failed to run config wizard", error as Error);
       console.error(colors.error(`\n✗ Error: ${error.message}\n`));
     }
     process.exit(1);

@@ -142,7 +142,7 @@ async function checkTool(tool: ToolInfo): Promise<ToolStatus> {
     });
     
     if (result.exitCode === 0) {
-      const version = (result.stdout || result.stderr).trim().split('\n')[0];
+      const version = (result.stdout || result.stderr).trim().split('\n')[0]!;
       return {
         tool: tool.name,
         installed: true,

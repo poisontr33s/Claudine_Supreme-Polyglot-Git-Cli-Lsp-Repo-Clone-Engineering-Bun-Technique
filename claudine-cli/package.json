@@ -32,22 +32,25 @@
     "preflight": "bun run typecheck && bun run lint && bun run test && bun run build"
   },
   "dependencies": {
-    "commander": "^12.1.0",
+    "@inquirer/prompts": "^8.4.2",
     "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0",
+    "execa": "^9.5.2",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.9",
     "ora": "^8.1.1",
     "prompts": "^2.4.2",
-    "zod": "^3.23.8",
-    "execa": "^9.5.2",
-    "fs-extra": "^11.2.0",
-    "fast-glob": "^3.3.2",
-    "cli-table3": "^0.6.5",
-    "update-notifier": "^7.3.1"
+    "update-notifier": "^7.3.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/bun": "latest",
-    "@types/prompts": "^2.4.9",
     "@types/fs-extra": "^11.0.4",
+    "@types/prompts": "^2.4.9",
+    "@types/update-notifier": "^6.0.8",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {

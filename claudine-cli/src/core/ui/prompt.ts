@@ -126,11 +126,11 @@ export async function autocomplete<T extends string>(
     name: 'selected',
     message,
     choices: formattedChoices,
-    suggest: suggest || ((input: string, choices) => 
+    suggest: (suggest || ((input: string, choices: any[]) => 
       Promise.resolve(choices.filter(c => 
         c.title.toLowerCase().includes(input.toLowerCase())
       ))
-    ),
+    )) as any,
   });
   
   return selected ?? choices[0];

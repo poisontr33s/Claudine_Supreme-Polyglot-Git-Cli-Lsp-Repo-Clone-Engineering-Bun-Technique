@@ -80,11 +80,11 @@ export class PowerShellExecutor {
 
       // Capture output
       const stdoutPromise = options.captureOutput !== false
-        ? Bun.readableStreamToText(proc.stdout)
+        ? Bun.readableStreamToText(proc.stdout!)
         : Promise.resolve('');
       
       const stderrPromise = options.captureOutput !== false
-        ? Bun.readableStreamToText(proc.stderr)
+        ? Bun.readableStreamToText(proc.stderr!)
         : Promise.resolve('');
 
       // Wait for process with timeout
@@ -276,9 +276,9 @@ export class PowerShellExecutor {
           return `-${key} ${value}`;
         }
         
-        if (Array.is_array(value)) {
+        if (Array.isArray(value)) {
           // Array parameters: -Items @("a","b","c")
-          const arrayStr = value.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',');
+          const arrayStr = value.map((v: unknown) => `"${String(v).replace(/"/g, '""')}"`).join(',');
           return `-${key} @(${arrayStr})`;
         }
 
