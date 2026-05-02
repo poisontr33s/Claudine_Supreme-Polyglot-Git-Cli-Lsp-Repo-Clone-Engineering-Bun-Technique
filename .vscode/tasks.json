@@ -606,6 +606,93 @@
         "focus": false,
         "panel": "shared"
       }
+    },
+
+    {
+      "label": "🧪 CI Local — Full Gate (typecheck + lint + test + build)",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy", "Bypass",
+        "-File", "${workspaceFolder}/scripts/ci-local.ps1"
+      ],
+      "group": { "kind": "test", "isDefault": true },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "detail": "Local equivalent of .github/workflows/test.yml — runs on this machine, no GitHub runners"
+    },
+
+    {
+      "label": "🧪 CI Local — Tests + Coverage Only",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy", "Bypass",
+        "-File", "${workspaceFolder}/scripts/ci-local.ps1",
+        "-SkipBuild", "-Coverage"
+      ],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "detail": "Typecheck + lint + bun test --coverage, skips prod build"
+    },
+
+    {
+      "label": "🚀 Release Local — All 6 Platforms (Windows + Linux + macOS)",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy", "Bypass",
+        "-File", "${workspaceFolder}/scripts/release-local.ps1"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "detail": "Bun cross-compiles all 6 platforms from this machine → claudine-cli/release/*.zip"
+    },
+
+    {
+      "label": "🚀 Release Local — Windows Only (fast)",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy", "Bypass",
+        "-File", "${workspaceFolder}/scripts/release-local.ps1",
+        "-Platform", "win",
+        "-SkipTests"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "detail": "Compile windows-x64 + windows-arm64 only, skip test suite"
     }
   ]
 }

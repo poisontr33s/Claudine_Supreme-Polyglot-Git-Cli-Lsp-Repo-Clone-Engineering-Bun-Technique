@@ -7,12 +7,12 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": [
+    "include": [
       "docs/**/*.{js,ts,jsx,tsx,json}",
       "scripts/**/*.{js,ts,jsx,tsx,json}",
       "research/**/*.{js,ts,jsx,tsx,json}"
     ],
-    "experimentalScannerIgnores": [
+    "ignore": [
       "**/node_modules",
       "**/necromancy_graveyard",
       "**/CLAUDINE_SUPREME_CONSCIOUSNESS_NEXUS",
