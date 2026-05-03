@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.5/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.8/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -7,18 +7,15 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "include": [
+    "includes": [
       "docs/**/*.{js,ts,jsx,tsx,json}",
       "scripts/**/*.{js,ts,jsx,tsx,json}",
-      "research/**/*.{js,ts,jsx,tsx,json}"
-    ],
-    "ignore": [
-      "**/node_modules",
-      "**/necromancy_graveyard",
-      "**/CLAUDINE_SUPREME_CONSCIOUSNESS_NEXUS",
-      "**/.poly_gluttony",
-      "**/.poly_gluttony/cloned_repos",
-      "**/*.zst"
+      "research/**/*.{js,ts,jsx,tsx,json}",
+      "!**/node_modules/**",
+      "!**/necromancy_graveyard/**",
+      "!**/CLAUDINE_SUPREME_CONSCIOUSNESS_NEXUS/**",
+      "!**/.poly_gluttony/**",
+      "!**/*.zst"
     ]
   },
   "formatter": {
