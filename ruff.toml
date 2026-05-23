@@ -5,8 +5,8 @@
 # Line length matching Black
 line-length = 88
 
-# Target Python 3.11+
-target-version = "py311"
+# Target Python 3.14+
+target-version = "py314"
 
 # Exclude common directories
 exclude = [
