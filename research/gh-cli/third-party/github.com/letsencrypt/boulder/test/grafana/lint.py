@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+#-*- coding: utf-8 -*-
+
 # Check dashboard JSON files for common errors, like forgetting to templatize a
 # datasource.
 import json

@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 <#
 .SYNOPSIS
     🔥💀⚓ VS Code Remote Tunnel - Secure Access to Local Machine

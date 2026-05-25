@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 set -e
 
 cd "$(realpath -- $(dirname -- "$0"))"

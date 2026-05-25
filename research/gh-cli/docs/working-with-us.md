@@ -5,7 +5,7 @@ POV: your team at GitHub is interested in shipping a new command in `gh`.
 This document outlines the process the CLI team prefers for helping ensure success both for your new feature and the CLI project as a whole.
 
 > [!NOTE]
-> External contributors, please see [CONTRIBUTING.md](/.github/CONTRIBUTING.md).
+> External contributors, please see CONTRIBUTING.md.
 
 ## Step 0: Create an extension
 

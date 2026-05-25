@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Performs spam detection on an issue and labels it if it's spam.
 #

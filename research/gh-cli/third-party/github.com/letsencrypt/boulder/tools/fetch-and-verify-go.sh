@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 #
 # Download Go, verify its signature, and if that all succeeds, move the tarball
 # to go.tar.gz in the current directory.

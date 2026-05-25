@@ -1,4 +1,6 @@
-#!/usr/bin/env -S python3 -u
+#!/usr/bin/env python3
+#-*- coding: utf-8 -*-
+
 """
 Run a local instance of Boulder for testing purposes.
 

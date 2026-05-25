@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+#-*- coding: utf-8 -*-
+
 """
 Security Reminder Hook for Claude Code
 This hook checks for security patterns in file edits and warns about potential vulnerabilities.

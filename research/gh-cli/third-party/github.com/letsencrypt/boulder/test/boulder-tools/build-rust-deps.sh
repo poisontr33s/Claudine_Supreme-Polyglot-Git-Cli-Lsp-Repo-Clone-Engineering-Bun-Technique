@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/usr/bin/env bash
 
 PROTO_ARCH=x86_64
 if [ "${TARGETPLATFORM}" = linux/arm64 ]; then

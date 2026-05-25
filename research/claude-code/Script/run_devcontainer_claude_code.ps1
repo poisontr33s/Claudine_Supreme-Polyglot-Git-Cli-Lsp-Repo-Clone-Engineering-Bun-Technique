@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 <#
 .SYNOPSIS
     Automates the setup and connection to a DevContainer environment using either Docker or Podman on Windows.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Check if an issue is spam or not and output "PASS" (not spam) or "FAIL" (spam).
 #

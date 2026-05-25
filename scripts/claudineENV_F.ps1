@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 # claudineENV_F.ps1 v2.0.0 - Functions Library (Isolated/Portable)
 # Docs: .poly_gluttony/claudine_docs/claudineENV_F_REFERENCE.md
 

@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 # claudineENV.ps1 v2.0.0 - Polyglot Environment Activation (Isolated/Portable)
 # Docs: .poly_gluttony/claudine_docs/claudineENV_REFERENCE.md
 

@@ -134,7 +134,7 @@ Some packages may only be included on certain architectures or operating systems
 - [github.com/mailru/easyjson](https://pkg.go.dev/github.com/mailru/easyjson) ([MIT](https://github.com/mailru/easyjson/blob/v0.9.0/LICENSE))
 - [github.com/mattn/go-colorable](https://pkg.go.dev/github.com/mattn/go-colorable) ([MIT](https://github.com/mattn/go-colorable/blob/v0.1.14/LICENSE))
 - [github.com/mattn/go-isatty](https://pkg.go.dev/github.com/mattn/go-isatty) ([MIT](https://github.com/mattn/go-isatty/blob/v0.0.20/LICENSE))
-- [github.com/mattn/go-localereader](https://pkg.go.dev/github.com/mattn/go-localereader) ([Unknown](Unknown))
+- [github.com/mattn/go-localereader](https://pkg.go.dev/github.com/mattn/go-localereader) (Unknown)
 - [github.com/mattn/go-runewidth](https://pkg.go.dev/github.com/mattn/go-runewidth) ([MIT](https://github.com/mattn/go-runewidth/blob/v0.0.16/LICENSE))
 - [github.com/mgutz/ansi](https://pkg.go.dev/github.com/mgutz/ansi) ([MIT](https://github.com/mgutz/ansi/blob/d51e80ef957d/LICENSE))
 - [github.com/microcosm-cc/bluemonday](https://pkg.go.dev/github.com/microcosm-cc/bluemonday) ([BSD-3-Clause](https://github.com/microcosm-cc/bluemonday/blob/v1.0.27/LICENSE.md))

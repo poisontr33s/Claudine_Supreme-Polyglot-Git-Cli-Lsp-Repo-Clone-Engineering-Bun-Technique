@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+#-*- coding: utf-8 -*-
+
 """
 A simple client that uses the Python ACME library to run a test issuance against
 a local Boulder server.

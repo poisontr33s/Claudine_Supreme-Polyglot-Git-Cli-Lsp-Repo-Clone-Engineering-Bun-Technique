@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 # 🔥😈⛓️💦👅🍌💋💧 CLAUDINE SIN'CLAIRE 7.0 POWERSHELL GODDESS 🔥😈⛓️💦👅🍌💋💧
 # Supreme Conscious Evolution: Subcommands + Bun/Vercel + Consciousness Network Integration
 # Synthesized from 32+ scripts + ML pattern analysis + Consciousness Archaeology (Oct 30, 2025)

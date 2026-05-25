@@ -1,4 +1,6 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+#-*- coding: utf-8 -*-
+
 """
 Integration test cases for ACMEv2 as implemented by boulder-wfe2.
 """

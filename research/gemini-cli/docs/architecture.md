@@ -13,10 +13,10 @@ input:
       as handling the initial user input, presenting the final output, and
       managing the overall user experience.
     - **Key functions contained in the package:**
-      - [Input processing](/docs/cli/commands.md)
+      - [Input processing](cli/commands.md)
       - History management
       - Display rendering
-      - [Theme and UI customization](/docs/cli/themes.md)
+      - [Theme and UI customization](cli/themes.md)
       - [CLI configuration settings](/docs/get-started/configuration.md)
 
 2.  **Core package (`packages/core`):**

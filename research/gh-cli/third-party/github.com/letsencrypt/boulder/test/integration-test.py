@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
+
 """
 This file contains basic infrastructure for running the integration test cases.
 Most test cases are in v2_integration.py. There are a few exceptions: Test cases

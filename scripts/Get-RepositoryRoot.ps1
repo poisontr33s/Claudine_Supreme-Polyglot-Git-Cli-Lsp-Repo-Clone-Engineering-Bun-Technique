@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 # Get-RepositoryRoot.ps1 v1.0.0
 # Dynamic repository root detection for isolated environments
 # Returns absolute path to repository root (where .git folder exists)

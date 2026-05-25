@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 <#
 .SYNOPSIS
     Setup PowerShell profile to auto-activate Claudine polyglot environment
