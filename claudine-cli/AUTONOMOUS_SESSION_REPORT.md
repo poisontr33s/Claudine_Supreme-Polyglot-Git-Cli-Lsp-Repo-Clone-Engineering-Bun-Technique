@@ -161,7 +161,7 @@ $ claudine env health
 $ claudine env health --verbose
 
 # Shows full paths to each tool binary
-# Example: C:\Users\erdno\PsychoNoir-Kontrapunkt\.poly_gluttony\tools\python\python.exe
+# Example: C:\Users\eldno\PsychoNoir-Kontrapunkt\.poly_gluttony\tools\python\python.exe
 ```
 
 **Integration Discovered**: 🎯

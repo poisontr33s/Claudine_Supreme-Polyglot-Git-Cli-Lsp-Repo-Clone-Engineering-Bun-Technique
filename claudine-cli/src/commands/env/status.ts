@@ -30,7 +30,7 @@ import { displayEnvironmentStatus } from "../../utils/environment.js";
  * ✅ Environment: Activated
  *    Source: claudineENV.ps1
  *    Version: 1.1.0
- *    Root: C:\Users\erdno\PsychoNoir-Kontrapunkt\.poly_gluttony
+ *    Root: C:\Users\eldno\PsychoNoir-Kontrapunkt\.poly_gluttony
  *
  * 📦 Polyglot Tools:
  *

@@ -37,7 +37,7 @@ function activate-poly {
         Write-Host "╚═══════════════════════════════════════════════════════════════╝`n" -ForegroundColor Cyan
     }
 
-    $ClaudineRoot = "C:\Users\erdno\PsychoNoir-Kontrapunkt\.poly_gluttony"
+    $ClaudineRoot = "C:\Users\eldno\PsychoNoir-Kontrapunkt\.poly_gluttony"
     
     $paths = @(
         "$ClaudineRoot\uv\bin",

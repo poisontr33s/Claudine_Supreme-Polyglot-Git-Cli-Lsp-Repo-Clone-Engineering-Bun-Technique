@@ -160,7 +160,7 @@ Three profile levels (all updated 2025-01-15):
 **Auto-Activation Block:**
 ```powershell
 # Claudine Polyglot Goddess CLI - Auto-Activation
-$claudineRoot = "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+$claudineRoot = "C:\Users\eldno\PsychoNoir-Kontrapunkt"
 $claudineScript = Join-Path $claudineRoot "scripts\claudineENV.ps1"
 
 # Only activate if in Claudine workspace and not already activated
@@ -228,7 +228,7 @@ $workspaceRoot = if ($psEditor -and $psEditor.Workspace -and $psEditor.Workspace
     $PWD.Path
 }
 
-$claudineWorkspace = "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+$claudineWorkspace = "C:\Users\eldno\PsychoNoir-Kontrapunkt"
 $claudineEnvScript = Join-Path $claudineWorkspace "scripts\claudineENV.ps1"
 
 if (($workspaceRoot -like "$claudineWorkspace*") -and (Test-Path $claudineEnvScript)) {
@@ -335,19 +335,19 @@ $env:PATH = ($cache.Values -join ";") + ";$env:PATH"
 ### Tool Installation Locations
 
 ```
-Project Root (C:\Users\erdno\PsychoNoir-Kontrapunkt\)
+Project Root (C:\Users\eldno\PsychoNoir-Kontrapunkt\)
 │
 ├── .poly_gluttony/tools/  (Portable tools)
 │   └── bin/
 │       ├── uv.exe
 │       └── ruff.exe
 │
-├── C:\Users\erdno\.cargo\bin\  (Rust tools)
+├── C:\Users\eldno\.cargo\bin\  (Rust tools)
 │   ├── cargo.exe
 │   ├── rustc.exe
 │   └── rust-analyzer.exe
 │
-├── C:\Users\erdno\.bun\bin\  (Bun)
+├── C:\Users\eldno\.bun\bin\  (Bun)
 │   └── bun.exe
 │
 ├── C:\msys64\usr\bin\  (MSYS2: Ruby, GCC, make)
@@ -363,8 +363,8 @@ Project Root (C:\Users\erdno\PsychoNoir-Kontrapunkt\)
 
 ```
 1. .poly_gluttony/tools/bin  (Portable: UV, Ruff)
-2. C:\Users\erdno\.cargo\bin  (Rust ecosystem)
-3. C:\Users\erdno\.bun\bin  (Bun runtime)
+2. C:\Users\eldno\.cargo\bin  (Rust ecosystem)
+3. C:\Users\eldno\.bun\bin  (Bun runtime)
 4. C:\msys64\usr\bin  (MSYS2: Ruby, GCC)
 5. C:\Program Files\7-Zip  (7-Zip utility)
 6. [Existing PATH]  (System paths)

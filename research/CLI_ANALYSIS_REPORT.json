@@ -6,7 +6,7 @@
     "FileCount": 101,
     "HasBunfig": false,
     "HasPackageJson": false,
-    "Path": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\git_cloned_CLIs\\claude-code",
+    "Path": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\git_cloned_CLIs\\claude-code",
     "DirCount": 58,
     "Type": "Unknown"
   },
@@ -17,13 +17,13 @@
     "FileCount": 42,
     "HasBunfig": false,
     "HasPackageJson": false,
-    "Path": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\git_cloned_CLIs\\copilot-cli",
+    "Path": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\git_cloned_CLIs\\copilot-cli",
     "DirCount": 19,
     "Type": "Unknown"
   },
   {
     "DevDependencies": 41,
-    "Path": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\git_cloned_CLIs\\gemini-cli",
+    "Path": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\git_cloned_CLIs\\gemini-cli",
     "HasPackageJson": true,
     "BinCommands": "gemini",
     "DirCount": 159,
@@ -44,7 +44,7 @@
     "FileCount": 2266,
     "HasBunfig": false,
     "HasPackageJson": false,
-    "Path": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\git_cloned_CLIs\\gh-cli",
+    "Path": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\git_cloned_CLIs\\gh-cli",
     "DirCount": 1002,
     "Type": "Go"
   }

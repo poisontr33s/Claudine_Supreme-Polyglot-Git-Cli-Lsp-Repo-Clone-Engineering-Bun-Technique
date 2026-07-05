@@ -41,7 +41,7 @@ This folder contains the **canonical** Claudine Polyglot Goddess CLI scripts. Al
 **Environment Variables Set:**
 - `$env:CLAUDINE_ACTIVATED = "claudineENV.ps1"`
 - `$env:CLAUDINE_VERSION = "1.1.0"`
-- `$env:CLAUDINE_ROOT = "C:\Users\erdno\PsychoNoir-Kontrapunkt"`
+- `$env:CLAUDINE_ROOT = "C:\Users\eldno\PsychoNoir-Kontrapunkt"`
 
 **Usage:**
 ```powershell
@@ -180,7 +180,7 @@ css-build-hybrid
 **What it adds to your profile:**
 ```powershell
 # Claudine Polyglot Goddess CLI - Auto-Activation
-$claudineRoot = "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+$claudineRoot = "C:\Users\eldno\PsychoNoir-Kontrapunkt"
 $claudineScript = Join-Path $claudineRoot "scripts\claudineENV.ps1"
 
 if ((Test-Path $claudineScript) -and -not $env:CLAUDINE_ACTIVATED) {
@@ -316,11 +316,11 @@ Migrate-To-Scripts-Folder.ps1
 | Ruff | Python Linter | `ruff --version` | `.poly_gluttony/tools/bin/ruff.exe` |
 | Black | Python Formatter | `black --version` | Python package |
 | pytest | Python Testing | `pytest --version` | Python package |
-| Cargo | Rust Package Manager | `cargo --version` | `C:\Users\erdno\.cargo\bin\cargo.exe` |
-| rustc | Rust Compiler | `rustc --version` | `C:\Users\erdno\.cargo\bin\rustc.exe` |
+| Cargo | Rust Package Manager | `cargo --version` | `C:\Users\eldno\.cargo\bin\cargo.exe` |
+| rustc | Rust Compiler | `rustc --version` | `C:\Users\eldno\.cargo\bin\rustc.exe` |
 | rust-analyzer | Rust LSP | `rust-analyzer --version` | Cargo-installed |
 | Ruby | MSYS2 Ruby | `ruby --version` | `C:\msys64\usr\bin\ruby.exe` |
-| Bun | JS/TS Runtime | `bun --version` | `C:\Users\erdno\.bun\bin\bun.exe` |
+| Bun | JS/TS Runtime | `bun --version` | `C:\Users\eldno\.bun\bin\bun.exe` |
 | gopls | Go LSP | `gopls version` | Go-installed |
 | GCC | C/C++ Compiler | `gcc --version` | `C:\msys64\usr\bin\gcc.exe` |
 | 7-Zip | Compression | `7z` | `C:\Program Files\7-Zip\7z.exe` |

@@ -230,8 +230,8 @@ Claudine CLI v2.0 represents a ground-up rewrite with modern architecture, compr
 
 ## Support
 
-- **Report bugs**: [GitHub Issues](https://github.com/erdno/PsychoNoir-Kontrapunkt/issues)
-- **Feature requests**: [GitHub Discussions](https://github.com/erdno/PsychoNoir-Kontrapunkt/discussions)
+- **Report bugs**: [GitHub Issues](https://github.com/eldno/PsychoNoir-Kontrapunkt/issues)
+- **Feature requests**: [GitHub Discussions](https://github.com/eldno/PsychoNoir-Kontrapunkt/discussions)
 - **Security issues**: Email maintainers privately
 
 ---

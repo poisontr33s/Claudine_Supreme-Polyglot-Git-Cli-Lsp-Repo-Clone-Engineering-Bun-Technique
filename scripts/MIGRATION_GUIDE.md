@@ -100,9 +100,9 @@ scripts/ (CANONICAL - 6 files)
 ### 1. PowerShell Profiles (3 files updated)
 
 **Files:**
-- `C:\Users\erdno\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
-- `C:\Users\erdno\Documents\WindowsPowerShell\Microsoft.VSCode_profile.ps1`
-- `C:\Users\erdno\Documents\WindowsPowerShell\profile.ps1` (AllHosts)
+- `C:\Users\eldno\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
+- `C:\Users\eldno\Documents\WindowsPowerShell\Microsoft.VSCode_profile.ps1`
+- `C:\Users\eldno\Documents\WindowsPowerShell\profile.ps1` (AllHosts)
 
 **Before:**
 ```powershell
@@ -335,7 +335,7 @@ Get-Content MIGRATION_REPORT_*.md | Select-Object -First 50
 # Check environment activated
 $env:CLAUDINE_ACTIVATED  # Should output: "claudineENV.ps1"
 $env:CLAUDINE_VERSION     # Should output: "1.1.0"
-$env:CLAUDINE_ROOT        # Should output: "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+$env:CLAUDINE_ROOT        # Should output: "C:\Users\eldno\PsychoNoir-Kontrapunkt"
 
 # Check script location
 Get-Content $PROFILE | Select-String "scripts\\claudineENV.ps1"

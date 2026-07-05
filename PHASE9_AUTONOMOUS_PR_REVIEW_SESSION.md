@@ -162,7 +162,7 @@ GitHub Copilot Agents (Task Execution, PR Creation)
 
 ### **4. Pre-existing Test Failure Tracked**:
 - `findPolygluttonyRoot Tests > should throw ConfigNotFoundError when not found`
-- **Issue**: Test expects error, but finds `C:\Users\erdno\.poly_gluttony` (upward search beyond temp dir)
+- **Issue**: Test expects error, but finds `C:\Users\eldno\.poly_gluttony` (upward search beyond temp dir)
 - **Status**: Not introduced by PRs #5-7, noted in all reviews
 
 ---

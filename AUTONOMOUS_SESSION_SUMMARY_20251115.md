@@ -52,9 +52,9 @@
 - All future PowerShell sessions now load from canonical location
 
 **Files Modified:**
-- `C:\Users\erdno\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` ✅
-- `C:\Users\erdno\Documents\WindowsPowerShell\Microsoft.VSCode_profile.ps1` ✅
-- `C:\Users\erdno\Documents\WindowsPowerShell\profile.ps1` ✅
+- `C:\Users\eldno\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` ✅
+- `C:\Users\eldno\Documents\WindowsPowerShell\Microsoft.VSCode_profile.ps1` ✅
+- `C:\Users\eldno\Documents\WindowsPowerShell\profile.ps1` ✅
 
 ---
 
@@ -199,7 +199,7 @@ scripts/ (7 files, ~210 KB) - Canonical + migration script
 **Environment Variables Verified:**
 - `$env:CLAUDINE_ACTIVATED = "claudineENV.ps1"` ✅
 - `$env:CLAUDINE_VERSION = "1.1.0"` ✅
-- `$env:CLAUDINE_ROOT = "C:\Users\erdno\PsychoNoir-Kontrapunkt"` ✅
+- `$env:CLAUDINE_ROOT = "C:\Users\eldno\PsychoNoir-Kontrapunkt"` ✅
 
 ---
 

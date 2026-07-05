@@ -34,7 +34,7 @@ Successfully configured **automatic `claudineENV.ps1` activation** across ALL Po
 **Profile Code Injected**:
 ```powershell
 # ═══ CLAUDINE AUTO-ACTIVATION START ═══
-$claudineWorkspace = "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+$claudineWorkspace = "C:\Users\eldno\PsychoNoir-Kontrapunkt"
 $claudineEnvScript = "$claudineWorkspace\.poly_gluttony\claudineENV.ps1"
 
 if (($PWD.Path -like "$claudineWorkspace*") -and 
@@ -164,7 +164,7 @@ $workspaceRoot = if ($psEditor -and $psEditor.Workspace -and $psEditor.Workspace
     $PWD.Path
 }
 
-$claudineWorkspace = "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+$claudineWorkspace = "C:\Users\eldno\PsychoNoir-Kontrapunkt"
 $claudineEnvScript = Join-Path $claudineWorkspace ".poly_gluttony\claudineENV.ps1"
 
 if (($workspaceRoot -like "$claudineWorkspace*") -and (Test-Path $claudineEnvScript)) {
@@ -258,7 +258,7 @@ await displayEnvironmentStatus();
 ✅ Environment: Activated
    Source: claudineENV.ps1
    Version: 1.1.0
-   Root: C:\Users\erdno\PsychoNoir-Kontrapunkt\.poly_gluttony
+   Root: C:\Users\eldno\PsychoNoir-Kontrapunkt\.poly_gluttony
 
 📦 Polyglot Tools:
 
@@ -363,19 +363,19 @@ claudine env status
 # ... (all 14 tools shown)
 
 # Environment is ready!
-PS C:\Users\erdno\PsychoNoir-Kontrapunkt> python --version
+PS C:\Users\eldno\PsychoNoir-Kontrapunkt> python --version
 Python 3.14.0
 
-PS C:\Users\erdno\PsychoNoir-Kontrapunkt> cargo --version
+PS C:\Users\eldno\PsychoNoir-Kontrapunkt> cargo --version
 cargo 1.91.0
 
 # Load functions on-demand
-PS C:\Users\erdno\PsychoNoir-Kontrapunkt> claudine-functions
+PS C:\Users\eldno\PsychoNoir-Kontrapunkt> claudine-functions
 💋 Functions loaded (new-python, new-rust, health-check, etc.)
 
-PS C:\Users\erdno\PsychoNoir-Kontrapunkt> new-python -Name myapp -Template web
+PS C:\Users\eldno\PsychoNoir-Kontrapunkt> new-python -Name myapp -Template web
 🐍 Creating Python project: myapp [web]
-✅ Python project created: C:\Users\erdno\PsychoNoir-Kontrapunkt\myapp (1.23s)
+✅ Python project created: C:\Users\eldno\PsychoNoir-Kontrapunkt\myapp (1.23s)
 ```
 
 ---
@@ -394,19 +394,19 @@ PS C:\Users\erdno\PsychoNoir-Kontrapunkt> new-python -Name myapp -Template web
    claudine-functions    🔧 Load functions library
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-PS C:\Users\erdno\PsychoNoir-Kontrapunkt> claudine-status
+PS C:\Users\eldno\PsychoNoir-Kontrapunkt> claudine-status
 ╔══════════════════════════════════════════════════════════════╗
 ║  🔥💋 CLAUDINE EXTENSION HOST STATUS 💋🔥                   ║
 ╚══════════════════════════════════════════════════════════════╝
 
 📍 Context:
    Terminal Type: PowerShell Extension Host
-   Workspace: C:\Users\erdno\PsychoNoir-Kontrapunkt
+   Workspace: C:\Users\eldno\PsychoNoir-Kontrapunkt
 
 🔧 Environment:
    ✅ Activated: claudineENV.ps1
    📦 Version: 1.1.0
-   📂 Root: C:\Users\erdno\PsychoNoir-Kontrapunkt\.poly_gluttony
+   📂 Root: C:\Users\eldno\PsychoNoir-Kontrapunkt\.poly_gluttony
 
 📦 Quick Tools Check:
    ✅ python
@@ -424,16 +424,16 @@ PS C:\Users\erdno\PsychoNoir-Kontrapunkt> claudine-status
 # Open Windows Terminal → PowerShell
 # Navigate to Claudine workspace
 
-PS C:\> cd C:\Users\erdno\PsychoNoir-Kontrapunkt
+PS C:\> cd C:\Users\eldno\PsychoNoir-Kontrapunkt
 
 🔥💋 Claudine polyglot environment activated
 
 # Environment auto-activated via $PROFILE!
 
-PS C:\Users\erdno\PsychoNoir-Kontrapunkt> bun --version
+PS C:\Users\eldno\PsychoNoir-Kontrapunkt> bun --version
 1.3.1
 
-PS C:\Users\erdno\PsychoNoir-Kontrapunkt> go version
+PS C:\Users\eldno\PsychoNoir-Kontrapunkt> go version
 go version go1.23.3 windows/amd64
 ```
 
@@ -442,7 +442,7 @@ go version go1.23.3 windows/amd64
 ### Example 4: Claudine CLI Status
 ```bash
 # In activated terminal
-PS C:\Users\erdno\PsychoNoir-Kontrapunkt\claudine-cli> bun run dev env status
+PS C:\Users\eldno\PsychoNoir-Kontrapunkt\claudine-cli> bun run dev env status
 
 ╔══════════════════════════════════════════════════════════════╗
 ║  🔥💋 CLAUDINE ENVIRONMENT STATUS 💋🔥                      ║
@@ -451,7 +451,7 @@ PS C:\Users\erdno\PsychoNoir-Kontrapunkt\claudine-cli> bun run dev env status
 ✅ Environment: Activated
    Source: claudineENV.ps1
    Version: 1.1.0
-   Root: C:\Users\erdno\PsychoNoir-Kontrapunkt\.poly_gluttony
+   Root: C:\Users\eldno\PsychoNoir-Kontrapunkt\.poly_gluttony
 
 📦 Polyglot Tools:
 

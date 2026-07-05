@@ -9,14 +9,14 @@
   // Performance: <40 MB memory, <100ms queries, 79% compression ratio, 65%+ cache hit rate
   // Endpoints: /mcp (unified), /health, /analytics, /servers, /docs/* (biome|react|css|uv|ruby)
   // "bunified-orchestrator": {
-  //  "command": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
+  //  "command": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
   // "args": [
   //  "run",
   //   ".poly_gluttony/bunified_mcp_orchestrator/bunified_mcp_orchestrator_stdio.ts"
   // ],
-  // "cwd": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt",
+  // "cwd": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt",
   // "env": {
-  //   "BUN_INSTALL": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun"
+  //   "BUN_INSTALL": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun"
   //   }
   // },
   // �🌐 GITHUB PRO+ HTTP MCP: Unified GitHub/Azure integration - no stdio needed
@@ -33,25 +33,25 @@
   // 🧠 Pieces Memory is available via bunified-orchestrator (SSE port 3300)
   // 🌊 Fetch MCP is available via bunified-orchestrator (HTTP port 3100)
   // "playwright-bun": {
-  //   "command": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
+  //   "command": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
   //   "args": ["run", ".poly_gluttony/mcp_servers/playwright_mcp_server.ts"],
-  //   "cwd": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt",
-  //   "env": { "BUN_INSTALL": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun" }
+  //   "cwd": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt",
+  //   "env": { "BUN_INSTALL": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun" }
   // },
   // "sentry-bun": {
-  //   "command": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
+  //   "command": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
   //   "args": ["run", ".poly_gluttony/mcp_servers/sentry_mcp_server.ts"],
-  //   "cwd": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt",
+  //   "cwd": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt",
   //   "env": {
-  //     "BUN_INSTALL": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun",
+  //     "BUN_INSTALL": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun",
   //     "SENTRY_AUTH_TOKEN": "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"
   //   }
   // },
   // "markitdown-bun": {
-  //   "command": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
+  //   "command": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun\\bin\\bun.exe",
   //   "args": ["run", ".poly_gluttony/mcp_servers/markitdown_mcp_server.ts"],
-  //   "cwd": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt",
-  //   "env": { "BUN_INSTALL": "C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun" }
+  //   "cwd": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt",
+  //   "env": { "BUN_INSTALL": "C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\bun" }
   // }
   // },
   // "inputs": []

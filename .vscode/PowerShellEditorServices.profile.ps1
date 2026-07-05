@@ -23,7 +23,7 @@ $workspaceRoot = if ($psEditor -and $psEditor.Workspace -and $psEditor.Workspace
 }
 
 # Claudine environment paths
-$claudineWorkspace = "C:\Users\erdno\PsychoNoir-Kontrapunkt"
+$claudineWorkspace = "C:\Users\eldno\PsychoNoir-Kontrapunkt"
 $claudineEnvScript = Join-Path $claudineWorkspace "scripts\claudineENV.ps1"
 $claudineFunctionsScript = Join-Path $claudineWorkspace "scripts\claudineENV_F.ps1"
 

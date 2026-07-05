@@ -86,19 +86,19 @@ claudine.js.jsc  7.88 MB  (bytecode)
     "typescript", "project-management", "dev-tools", "wizard",
     "interactive", "tui", "plugin-system"
   ],
-  "homepage": "https://github.com/erdno/PsychoNoir-Kontrapunkt/tree/main/claudine-cli",
+  "homepage": "https://github.com/eldno/PsychoNoir-Kontrapunkt/tree/main/claudine-cli",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erdno/PsychoNoir-Kontrapunkt.git",
+    "url": "git+https://github.com/eldno/PsychoNoir-Kontrapunkt.git",
     "directory": "claudine-cli"
   },
   "bugs": {
-    "url": "https://github.com/erdno/PsychoNoir-Kontrapunkt/issues"
+    "url": "https://github.com/eldno/PsychoNoir-Kontrapunkt/issues"
   },
   "license": "MIT",
   "author": {
     "name": "Claudine Development Team",
-    "url": "https://github.com/erdno"
+    "url": "https://github.com/eldno"
   },
   "files": [
     "dist/",
@@ -591,7 +591,7 @@ npm install -g @claudine/cli@2.0.0
 claudine --version  # Should output 2.0.0
 
 # Verify GitHub release
-# Visit: https://github.com/erdno/PsychoNoir-Kontrapunkt/releases/tag/v2.0.0
+# Visit: https://github.com/eldno/PsychoNoir-Kontrapunkt/releases/tag/v2.0.0
 # Confirm: All 6 executables attached
 ```
 

@@ -14,7 +14,7 @@
         "-ExecutionPolicy",
         "Bypass",
         "-Command",
-        ". 'C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\INJECTION_PAYLOAD_NSFW18_+++.ps1'"
+        ". 'C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\.poly_gluttony\\INJECTION_PAYLOAD_NSFW18_+++.ps1'"
       ],
       "command": "pwsh",
       "problemMatcher": [],

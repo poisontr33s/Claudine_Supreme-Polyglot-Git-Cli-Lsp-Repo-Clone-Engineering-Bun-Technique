@@ -219,8 +219,8 @@
     "workbench.list.smoothScrolling": true,
     "go.toolsManagement.autoUpdate": false,
     "vs-kubernetes": {
-        "vscode-kubernetes.helm-path-windows": "C:\\Users\\erdno\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
-        "vscode-kubernetes.minikube-path-windows": "C:\\Users\\erdno\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
+        "vscode-kubernetes.helm-path-windows": "C:\\Users\\eldno\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
+        "vscode-kubernetes.minikube-path-windows": "C:\\Users\\eldno\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
         "vs-kubernetes.knownKubeconfigs": [],
         "vs-kubernetes.kubeconfig": "/workspaces/PsychoNoir-Kontrapunkt/backend/docker/.dockerignore",
         "vscode-kubernetes.kubectl-path-linux": "/home/vscode/.local/state/vs-kubernetes/tools/kubectl/kubectl",

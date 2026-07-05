@@ -21,9 +21,9 @@ This report documents the migration from .poly_gluttony/ to scripts/ as the cano
 
 | Profile | Status | Path |
 |---------|--------|------|
-| AllHosts | ⚠️ NOT_FOUND | `C:\Users\erdno\Documents\PowerShell\profile.ps1` |
-| Microsoft.VSCode | ⚠️ NOT_FOUND | `C:\Users\erdno\Documents\PowerShell\Microsoft.VSCode_profile.ps1` |
-| Microsoft.PowerShell | ⚠️ NOT_FOUND | `C:\Users\erdno\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` |
+| AllHosts | ⚠️ NOT_FOUND | `C:\Users\eldno\Documents\PowerShell\profile.ps1` |
+| Microsoft.VSCode | ⚠️ NOT_FOUND | `C:\Users\eldno\Documents\PowerShell\Microsoft.VSCode_profile.ps1` |
+| Microsoft.PowerShell | ⚠️ NOT_FOUND | `C:\Users\eldno\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` |
 
 ---
 

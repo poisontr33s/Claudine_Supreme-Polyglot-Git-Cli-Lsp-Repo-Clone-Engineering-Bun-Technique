@@ -383,8 +383,8 @@ spinner.succeed(chalk.green('✅ Project created!'))
 // ~/.claudine/config.json
 {
   "defaultTemplate": "basic",
-  "projectRoot": "C:/Users/erdno/PsychoNoir-Kontrapunkt/Temp",
-  "polyglotRoot": "C:/Users/erdno/PsychoNoir-Kontrapunkt/.poly_gluttony",
+  "projectRoot": "C:/Users/eldno/PsychoNoir-Kontrapunkt/Temp",
+  "polyglotRoot": "C:/Users/eldno/PsychoNoir-Kontrapunkt/.poly_gluttony",
   "msys2Personality": "ucrt64"
 }
 ```

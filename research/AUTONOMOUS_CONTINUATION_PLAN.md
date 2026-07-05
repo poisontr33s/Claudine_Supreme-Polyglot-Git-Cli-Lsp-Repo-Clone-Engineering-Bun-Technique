@@ -112,7 +112,7 @@ export interface ActivateOptions {
 }
 
 export async function activate(options: ActivateOptions = {}) {
-  const polyRoot = 'C:\\Users\\erdno\\PsychoNoir-Kontrapunkt\\.poly_gluttony';
+  const polyRoot = 'C:\\Users\\eldno\\PsychoNoir-Kontrapunkt\\.poly_gluttony';
   const paths = [
     join(polyRoot, 'uv', 'bin'),
     join(polyRoot, 'python', 'Scripts'),
